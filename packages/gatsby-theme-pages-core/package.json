@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@maiertech/gatsby-helpers": "0.2.1",
-    "@mdx-js/mdx": "1.6.19",
+    "@mdx-js/mdx": "1.6.21",
     "@mdx-js/react": "1.6.19",
     "gatsby-plugin-mdx": "1.2.51",
     "gatsby-plugin-sharp": "2.6.43",

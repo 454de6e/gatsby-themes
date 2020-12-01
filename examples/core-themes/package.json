@@ -16,7 +16,7 @@
     "@maiertech/gatsby-theme-pages-core": "*",
     "@maiertech/gatsby-theme-posts-core": "*",
     "@maiertech/gatsby-theme-tags-core": "*",
-    "@mdx-js/mdx": "1.6.19",
+    "@mdx-js/mdx": "1.6.21",
     "@mdx-js/react": "1.6.19",
     "gatsby": "2.24.85",
     "gatsby-plugin-mdx": "1.2.51",
