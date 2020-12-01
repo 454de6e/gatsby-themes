@@ -1,0 +1,38 @@
+{
+  "name": "@maiertech/gatsby-theme-theme-ui",
+  "description": "Add opinionated Theme UI styling to a Gatsby site.",
+  "version": "0.0.0",
+  "author": "Thilo Maier <git@maier.asia>",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maiertech/gatsby-themes.git",
+    "directory": "packages/gatsby-theme-theme-ui"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "purge": "rm -rf ./node_modules"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.26.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.1.1",
+    "@maiertech/components": "^0.21.0",
+    "@maiertech/preset": "^0.3.0",
+    "gatsby-plugin-catch-links": "^2.5.0",
+    "gatsby-plugin-theme-ui": "^0.3.4",
+    "prop-types": "^15.7.2",
+    "theme-ui": "^0.3.4"
+  }
+}

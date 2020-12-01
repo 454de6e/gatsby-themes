@@ -7,6 +7,18 @@ const {
 
 const withDefaults = require('./theme-options');
 
+// This Webpack config helps prevent this error: https://github.com/gatsbyjs/gatsby/issues/24815.
+// It is caused when using @maiertech/gatsby-helpers inside use-posts.js.
+// See https://www.gatsbyjs.com/docs/troubleshooting-common-errors/#issues-with-fs-resolution.
+/* istanbul ignore next */
+module.exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    node: {
+      fs: 'empty',
+    },
+  });
+};
+
 /* istanbul ignore next */
 module.exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   const { contentPath } = withDefaults(themeOptions);

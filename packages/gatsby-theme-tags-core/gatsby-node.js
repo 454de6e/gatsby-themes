@@ -60,6 +60,7 @@ module.exports.createPages = async (
       component: require.resolve('./src/templates/tag-query.js'),
       context: {
         tag,
+        tags,
         // mdxCollections is required in page query.
         mdxCollections,
         // Theme options can be used in shadowed pages.

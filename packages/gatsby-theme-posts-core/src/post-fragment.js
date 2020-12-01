@@ -9,6 +9,7 @@ export const fragment = graphql`
     date(formatString: "MMMM DD, YYYY")
     datetime: date(formatString: "YYYY-MM-DD")
     description
+    tags
     body
     path
   }
