@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "core-themes-example",
+  "name": "digital-garden-example",
   "version": "0.0.0",
-  "description": "Example site for developing and testing core themes.",
+  "description": "Digital garden example site.",
   "author": "Thilo Maier <git@maier.asia>",
   "license": "MIT",
   "scripts": {
@@ -13,13 +13,8 @@
     "purge": "rm -rf ./node_modules"
   },
   "dependencies": {
-    "@maiertech/gatsby-theme-pages-core": "*",
-    "@maiertech/gatsby-theme-posts-core": "*",
-    "@maiertech/gatsby-theme-tags-core": "*",
-    "@mdx-js/mdx": "^1.6.21",
-    "@mdx-js/react": "^1.6.21",
+    "@maiertech/gatsby-theme-digital-garden": "*",
     "gatsby": "^2.27.5",
-    "gatsby-plugin-mdx": "^1.5.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   }

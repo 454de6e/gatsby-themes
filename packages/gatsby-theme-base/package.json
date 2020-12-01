@@ -1,0 +1,36 @@
+{
+  "name": "@maiertech/gatsby-theme-base",
+  "description": "An opinionated theme to jump start a Gatsby site.",
+  "version": "0.0.0",
+  "author": "Thilo Maier <git@maier.asia>",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maiertech/gatsby-themes.git",
+    "directory": "packages/gatsby-theme-base"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "purge": "rm -rf ./node_modules"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.26.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "dependencies": {
+    "@maiertech/gatsby-helpers": "^0.2.1",
+    "gatsby-plugin-react-helmet": "^3.5.0",
+    "gatsby-plugin-sitemap": "^2.7.0",
+    "prop-types": "^15.7.2",
+    "react-helmet": "^6.1.0"
+  }
+}
