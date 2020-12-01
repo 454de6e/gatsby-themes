@@ -33,7 +33,7 @@
     "gatsby-plugin-mdx": "1.2.51",
     "gatsby-plugin-sharp": "2.6.43",
     "gatsby-source-filesystem": "2.3.37",
-    "gatsby-transformer-sharp": "2.5.19",
+    "gatsby-transformer-sharp": "2.7.0",
     "prop-types": "15.7.2"
   }
 }
