@@ -86,6 +86,23 @@ describe('createPages', () => {
       component: require.resolve('../src/templates/tag-query.js'),
       context: {
         tag: 'tag1',
+        tags: [
+          {
+            tag: 'tag1',
+            count: 5,
+            path: '/tags/tag1/',
+          },
+          {
+            tag: 'tag2',
+            count: 1,
+            path: '/tags/tag2/',
+          },
+          {
+            tag: 'tag3',
+            count: 2,
+            path: '/tags/tag3/',
+          },
+        ],
         mdxCollections: ['posts'],
         themeOptions: {
           basePath: '/',
@@ -101,6 +118,23 @@ describe('createPages', () => {
       component: require.resolve('../src/templates/tag-query.js'),
       context: {
         tag: 'tag2',
+        tags: [
+          {
+            tag: 'tag1',
+            count: 5,
+            path: '/tags/tag1/',
+          },
+          {
+            tag: 'tag2',
+            count: 1,
+            path: '/tags/tag2/',
+          },
+          {
+            tag: 'tag3',
+            count: 2,
+            path: '/tags/tag3/',
+          },
+        ],
         mdxCollections: ['posts'],
         themeOptions: {
           basePath: '/',
@@ -116,6 +150,23 @@ describe('createPages', () => {
       component: require.resolve('../src/templates/tag-query.js'),
       context: {
         tag: 'tag3',
+        tags: [
+          {
+            tag: 'tag1',
+            count: 5,
+            path: '/tags/tag1/',
+          },
+          {
+            tag: 'tag2',
+            count: 1,
+            path: '/tags/tag2/',
+          },
+          {
+            tag: 'tag3',
+            count: 2,
+            path: '/tags/tag3/',
+          },
+        ],
         mdxCollections: ['posts'],
         themeOptions: {
           basePath: '/',
