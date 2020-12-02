@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-posts-core
 
+## 0.4.0
+
+### Minor Changes
+
+- ab23e33: Add tags to post fragment
+
 ## 0.3.1
 
 ### Patch Changes

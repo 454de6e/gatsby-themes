@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-tags-core
 
+## 0.4.0
+
+### Minor Changes
+
+- ab23e33: Add tags to context of tag pages
+
 ## 0.3.2
 
 ### Patch Changes
