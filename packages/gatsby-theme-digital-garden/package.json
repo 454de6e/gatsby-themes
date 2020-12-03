@@ -1,7 +1,7 @@
 {
   "name": "@maiertech/gatsby-theme-digital-garden",
   "description": "Digital garden theme with notest and posts.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Thilo Maier <git@maier.asia>",
   "license": "MIT",
   "main": "index.js",

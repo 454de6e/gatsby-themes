@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.1.1
+
+### Patch Changes
+
+- 02b499f: Re-release due to replacing \* deps with specific versions
+
 ## 0.1.0
 
 ### Minor Changes
