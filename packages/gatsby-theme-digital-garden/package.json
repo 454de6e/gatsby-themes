@@ -28,10 +28,10 @@
   },
   "dependencies": {
     "@maiertech/gatsby-helpers": "^0.2.1",
-    "@maiertech/gatsby-theme-base": "*",
+    "@maiertech/gatsby-theme-base": "^0.1.0",
     "@maiertech/gatsby-theme-posts-core": "^0.4.0",
     "@maiertech/gatsby-theme-tags-core": "^0.4.0",
-    "@maiertech/gatsby-theme-theme-ui": "*",
+    "@maiertech/gatsby-theme-theme-ui": "^0.1.0",
     "@mdx-js/mdx": "^1.6.19",
     "@mdx-js/react": "^1.6.19",
     "gatsby-plugin-mdx": "^1.2.51",

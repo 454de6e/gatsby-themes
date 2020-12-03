@@ -27,9 +27,9 @@
     "react-dom": "^16.14.0"
   },
   "dependencies": {
-    "@maiertech/gatsby-helpers": "0.2.1",
-    "gatsby-plugin-mdx": "1.2.51",
-    "gatsby-source-filesystem": "2.3.37",
-    "prop-types": "15.7.2"
+    "@maiertech/gatsby-helpers": "^0.2.1",
+    "gatsby-plugin-mdx": "^1.2.51",
+    "gatsby-source-filesystem": "^2.3.37",
+    "prop-types": "^15.7.2"
   }
 }

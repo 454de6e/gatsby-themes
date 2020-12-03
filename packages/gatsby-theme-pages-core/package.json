@@ -27,13 +27,13 @@
     "react-dom": "^16.14.0"
   },
   "dependencies": {
-    "@maiertech/gatsby-helpers": "0.2.1",
-    "@mdx-js/mdx": "1.6.19",
-    "@mdx-js/react": "1.6.19",
-    "gatsby-plugin-mdx": "1.2.51",
-    "gatsby-plugin-sharp": "2.6.43",
-    "gatsby-source-filesystem": "2.3.37",
-    "gatsby-transformer-sharp": "2.5.19",
-    "prop-types": "15.7.2"
+    "@maiertech/gatsby-helpers": "^0.2.1",
+    "@mdx-js/mdx": "^1.6.19",
+    "@mdx-js/react": "^1.6.19",
+    "gatsby-plugin-mdx": "^1.2.51",
+    "gatsby-plugin-sharp": "^2.6.43",
+    "gatsby-source-filesystem": "^2.3.37",
+    "gatsby-transformer-sharp": "^2.5.19",
+    "prop-types": "^15.7.2"
   }
 }
