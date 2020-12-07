@@ -41,6 +41,7 @@ You can use this theme to tag MDX pages from any theme that guarantees that
 above frontmatter fields. You can use optional `frontmatter.description` for
 tagged items in cases where all tagged pages support `description` in
 frontmatter. Some compatible themes, such as
-[`@undataforum/gatsby-themeblog-core`](https://github.com/UNDataForum/gatsby-themes/tree/master/packages/gatsby-theme-blog-core)
+[`@undataforum/gatsby-theme-blog-core`](https://github.com/UNDataForum/gatsby-themes/tree/master/packages/gatsby-theme-blog-core)
 do not derive description from the frontmatter and therefore
-`frontmatter.description` is not availalbe. This why `description` is optional.
+`frontmatter.description` is not availalbe. This is why `description` is
+optional.
