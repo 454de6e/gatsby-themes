@@ -20,7 +20,8 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
       </Heading>
     ),
     author,
-    date: { formatted: date, datetime },
+    // Add date object to post only if both date and datetime exist.
+    date: date && datetime ? { formatted: date, datetime } : undefined,
   };
   const { basePath, tagCollection } = pageContext.themeOptions;
   const values = tags.map((tag) => ({
