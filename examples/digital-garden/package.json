@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@maiertech/gatsby-theme-digital-garden": "*",
-    "gatsby": "^2.27.5",
+    "gatsby": "^2.28.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   }

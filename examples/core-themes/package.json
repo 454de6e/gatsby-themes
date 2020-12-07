@@ -18,8 +18,8 @@
     "@maiertech/gatsby-theme-tags-core": "*",
     "@mdx-js/mdx": "^1.6.21",
     "@mdx-js/react": "^1.6.21",
-    "gatsby": "^2.27.5",
-    "gatsby-plugin-mdx": "^1.5.0",
+    "gatsby": "^2.28.0",
+    "gatsby-plugin-mdx": "^1.6.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   }
