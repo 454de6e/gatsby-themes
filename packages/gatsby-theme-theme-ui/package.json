@@ -27,10 +27,10 @@
     "react-dom": "^16.14.0"
   },
   "dependencies": {
-    "@emotion/react": "^11.1.1",
-    "@maiertech/components": "^0.21.0",
-    "@maiertech/preset": "^0.3.0",
-    "gatsby-plugin-catch-links": "^2.5.0",
+    "@emotion/react": "^11.1.2",
+    "@maiertech/components": "^0.21.1",
+    "@maiertech/preset": "^0.3.1",
+    "gatsby-plugin-catch-links": "^2.6.0",
     "gatsby-plugin-theme-ui": "^0.3.4",
     "prop-types": "^15.7.2",
     "theme-ui": "^0.3.4"
