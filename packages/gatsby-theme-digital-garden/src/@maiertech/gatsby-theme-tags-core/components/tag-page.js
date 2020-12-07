@@ -5,12 +5,12 @@ import {
   Container,
   Heading,
   Layout,
-  Link as TLink,
+  Link,
   PostPreview,
   Styled,
   Tags,
 } from '@maiertech/gatsby-theme-theme-ui';
-import { Link } from 'gatsby';
+import { Link as GatsbyLink } from 'gatsby';
 
 const ShadowedTagPage = ({ data, location, pageContext }) => {
   const { tag } = pageContext;
@@ -43,9 +43,10 @@ const ShadowedTagPage = ({ data, location, pageContext }) => {
       <Container variant="narrow">
         <Styled.h1>{tag}</Styled.h1>
         {taggedItems.map(({ id, path, taggedItem }) => (
-          <TLink as={Link} key={id} href={path} sx={{ color: 'inherit' }}>
+          // Gatsby Link uses `to` instaead of `href`.
+          <Link as={GatsbyLink} key={id} to={path} sx={{ color: 'inherit' }}>
             <PostPreview post={taggedItem} mb={3} />
-          </TLink>
+          </Link>
         ))}
         <Styled.h2>All tags</Styled.h2>
         <Tags
