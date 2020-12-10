@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
         <Box sx={{ flexShrink: 0 }}>
           <Header title={title} links={links} mb={[3, 4]} />
         </Box>
-        <Box sx={{ flex: 1 }}>{children}</Box>
+        <Box sx={{ flex: 1, mb: 4 }}>{children}</Box>
         <Box sx={{ flexShrink: 0 }}>
           <Footer title={title} name={author} links={links} />
         </Box>

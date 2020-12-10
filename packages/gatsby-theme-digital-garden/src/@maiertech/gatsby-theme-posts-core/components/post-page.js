@@ -33,7 +33,7 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
       <SEO title={title} description={description} path={location.pathname} />
       <Container variant="narrow">
         <PostPreview post={post} mb={3} />
-        <Tags values={values} />
+        <Tags values={values} mb={3} />
         <MDXRenderer>{body}</MDXRenderer>
       </Container>
     </Layout>
