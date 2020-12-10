@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-posts-core
 
+## 0.4.1
+
+### Patch Changes
+
+- 23257e9: Upgrade deps
+
 ## 0.4.0
 
 ### Minor Changes
