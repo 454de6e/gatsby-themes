@@ -25,7 +25,15 @@ const ShadowedTagPage = ({ data, location, pageContext }) => {
       taggedItem: {
         collection,
         title: (
-          <Heading as="h2" sx={{ variant: 'styles.h2', mb: 1 }}>
+          <Heading
+            as="h2"
+            sx={{
+              variant: 'styles.h2',
+              // Override color from variant.
+              color: 'inherit',
+              mb: 1,
+            }}
+          >
             {title}
           </Heading>
         ),
@@ -44,7 +52,7 @@ const ShadowedTagPage = ({ data, location, pageContext }) => {
         <Styled.h1>{tag}</Styled.h1>
         {taggedItems.map(({ id, path, taggedItem }) => (
           // Gatsby Link uses `to` instaead of `href`.
-          <Link as={GatsbyLink} key={id} to={path} sx={{ color: 'inherit' }}>
+          <Link as={GatsbyLink} key={id} to={path}>
             <PostPreview post={taggedItem} mb={3} />
           </Link>
         ))}

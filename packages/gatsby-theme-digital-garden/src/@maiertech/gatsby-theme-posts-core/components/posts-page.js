@@ -16,7 +16,15 @@ const PostsPage = ({ data, location }) => {
     ({ id, title, date, datetime, path }) => ({
       id,
       title: (
-        <Heading as="h2" sx={{ variant: 'styles.h2', mb: 1 }}>
+        <Heading
+          as="h2"
+          sx={{
+            variant: 'styles.h2',
+            // Override color from variant.
+            color: 'inherit',
+            mb: 1,
+          }}
+        >
           {title}
         </Heading>
       ),
@@ -35,7 +43,7 @@ const PostsPage = ({ data, location }) => {
         <Styled.h1>Posts</Styled.h1>
         <Grid gap={4} columns={1}>
           {posts.map(({ id, path, ...post }) => (
-            <Link key={id} href={path} sx={{ color: 'inherit' }}>
+            <Link key={id} href={path}>
               <PostPreview post={{ ...post }} />
             </Link>
           ))}
