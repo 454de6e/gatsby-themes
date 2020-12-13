@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-theme-ui
 
+## 0.1.2
+
+### Patch Changes
+
+- 4e57935: Fix inconsistent styling between code and inlineCode
+
 ## 0.1.1
 
 ### Patch Changes
