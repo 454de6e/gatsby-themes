@@ -30,6 +30,7 @@
     "@emotion/react": "^11.1.2",
     "@maiertech/components": "^0.22.0",
     "@maiertech/preset": "^0.5.0",
+    "@theme-ui/prism": "^0.6.0-alpha.3",
     "gatsby-plugin-catch-links": "^2.6.0",
     "gatsby-plugin-theme-ui": "^0.6.0-alpha.3",
     "prop-types": "^15.7.2",

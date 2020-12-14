@@ -3,7 +3,7 @@ module.exports = {
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-theme-ui',
-      options: { preset: '@maiertech/preset' },
+      options: { prismPreset: 'prism', preset: '@maiertech/preset' },
     },
   ],
 };
