@@ -1,7 +1,7 @@
 import React from 'react';
 import { node } from 'prop-types';
 import { Footer, Header } from '@maiertech/components';
-import { Box, Flex, Styled } from 'theme-ui';
+import { Box, Flex, Themed } from 'theme-ui';
 import { Global } from '@emotion/react';
 
 import useSiteMetadata from '../use-site-metadata';
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
   const { siteTitle: title, siteAuthor: author } = useSiteMetadata();
   // To make sticky footer work all elements up the hierarchy must set height to 100%.
   return (
-    <Styled.root>
+    <Themed.root>
       <Global
         styles={{
           'html, body, #___gatsby, #gatsby-focus-wrapper, #gatsby-focus-wrapper > div': {
@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
           <Footer title={title} name={author} links={links} />
         </Box>
       </Flex>
-    </Styled.root>
+    </Themed.root>
   );
 };
 

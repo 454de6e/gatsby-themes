@@ -8,7 +8,7 @@ import {
   Layout,
   Link,
   PostPreview,
-  Styled,
+  Themed,
 } from '@maiertech/gatsby-theme-theme-ui';
 
 const PostsPage = ({ data, location }) => {
@@ -40,7 +40,7 @@ const PostsPage = ({ data, location }) => {
         path={location.pathname}
       />
       <Container variant="narrow">
-        <Styled.h1>Posts</Styled.h1>
+        <Themed.h1>Posts</Themed.h1>
         <Grid gap={4} columns={1}>
           {posts.map(({ id, path, ...post }) => (
             <Link key={id} href={path}>
