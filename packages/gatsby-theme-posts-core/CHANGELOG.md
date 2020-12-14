@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-posts-core
 
+## 0.5.0
+
+### Minor Changes
+
+- 4a994cc: Add support for React v17
+
 ## 0.4.1
 
 ### Patch Changes
