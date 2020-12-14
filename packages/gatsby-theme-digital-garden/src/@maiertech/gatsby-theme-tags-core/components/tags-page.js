@@ -3,8 +3,8 @@ import { object } from 'prop-types';
 import {
   Container,
   Layout,
-  Styled,
   Tags,
+  Themed,
 } from '@maiertech/gatsby-theme-theme-ui';
 import { SEO } from '@maiertech/gatsby-theme-base';
 
@@ -16,9 +16,9 @@ const TagsPage = ({ location, pageContext }) => (
       path={location.pathname}
     />
     <Container variant="narrow">
-      <Styled.h1>
+      <Themed.h1>
         {`Tags in ${pageContext.themeOptions.tagCollection}`}
-      </Styled.h1>
+      </Themed.h1>
       <Tags
         values={pageContext.tags.map(({ tag, count, path }) => ({
           tag: `${tag} (${count})`,
