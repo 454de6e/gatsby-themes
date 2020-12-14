@@ -1,5 +1,20 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.2.0
+
+### Minor Changes
+
+- 4a994cc: Add support for React v17
+
+### Patch Changes
+
+- Updated dependencies [6a7418a]
+- Updated dependencies [4a994cc]
+  - @maiertech/gatsby-theme-theme-ui@0.2.0
+  - @maiertech/gatsby-theme-base@0.2.0
+  - @maiertech/gatsby-theme-posts-core@0.5.0
+  - @maiertech/gatsby-theme-tags-core@0.5.0
+
 ## 0.1.2
 
 ### Patch Changes

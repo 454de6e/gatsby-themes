@@ -1,5 +1,12 @@
 # @maiertech/gatsby-theme-theme-ui
 
+## 0.2.0
+
+### Minor Changes
+
+- 6a7418a: Add syntax highlighting with Prism
+- 4a994cc: Add support for React v17
+
 ## 0.1.2
 
 ### Patch Changes
