@@ -69,7 +69,7 @@ module.exports.onCreateNode = (
   nodeData.path = createPath(
     basePath,
     // Decide whether or not to omit relativeDirectory in path.
-    fullRelativePath ? slugify(relativeDirectory) : '',
+    fullRelativePath ? relativeDirectory : '',
     slugify(nodeData.title)
   );
 

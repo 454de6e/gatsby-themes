@@ -14,6 +14,7 @@ module.exports = {
       options: {
         collection: 'posts',
         contentPath: 'content/posts',
+        fullRelativePath: false,
         mdxOtherwiseConfigured: true,
       },
     },
@@ -22,6 +23,7 @@ module.exports = {
       options: {
         collection: 'news',
         contentPath: 'content/news',
+        fullRelativePath: false,
         mdxOtherwiseConfigured: true,
       },
     },

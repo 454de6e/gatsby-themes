@@ -28,8 +28,8 @@
   },
   "dependencies": {
     "@maiertech/gatsby-helpers": "^0.2.1",
-    "gatsby-plugin-mdx": "^1.6.0",
-    "gatsby-source-filesystem": "^2.7.0",
+    "gatsby-plugin-mdx": "^1.7.0",
+    "gatsby-source-filesystem": "^2.8.0",
     "prop-types": "^15.7.2"
   }
 }
