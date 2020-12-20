@@ -22,6 +22,14 @@ module.exports = {
       },
     },
     {
+      resolve: '@maiertech/gatsby-theme-pages-core',
+      options: {
+        contentPath: 'content/pages',
+        fullRelativePath: true,
+        mdxOtherwiseConfigured: true,
+      },
+    },
+    {
       resolve: '@maiertech/gatsby-theme-tags-core',
       options: {
         // This config results in tage pages being shifted down one level.

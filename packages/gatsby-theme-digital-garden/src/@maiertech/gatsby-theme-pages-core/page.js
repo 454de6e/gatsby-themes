@@ -1,0 +1,25 @@
+import React from 'react';
+import { object } from 'prop-types';
+import { Container, Layout, Themed } from '@maiertech/gatsby-theme-theme-ui';
+import { SEO } from '@maiertech/gatsby-theme-base';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+
+const ShadowedPage = ({ data, location }) => {
+  const { title, description, body } = data.page;
+  return (
+    <Layout location={location}>
+      <SEO title={title} description={description} path={location.pathname} />
+      <Container variant="narrow">
+        <Themed.h1>{title}</Themed.h1>
+        <MDXRenderer>{body}</MDXRenderer>
+      </Container>
+    </Layout>
+  );
+};
+
+ShadowedPage.propTypes = {
+  data: object.isRequired,
+  location: object.isRequired,
+};
+
+export default ShadowedPage;
