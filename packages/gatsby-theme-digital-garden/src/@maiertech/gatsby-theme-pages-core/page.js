@@ -1,8 +1,10 @@
 import React from 'react';
 import { object } from 'prop-types';
-import { Container, Layout, Themed } from '@maiertech/gatsby-theme-theme-ui';
+import { Container, Themed } from '@maiertech/gatsby-theme-theme-ui';
 import { SEO } from '@maiertech/gatsby-theme-base';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+
+import Layout from '../../components/layout';
 
 const ShadowedPage = ({ data, location }) => {
   const { title, description, body } = data.page;

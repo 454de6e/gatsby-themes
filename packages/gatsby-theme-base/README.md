@@ -1,9 +1,9 @@
 # @maiertech/gatsby-theme-base
 
-## Components
+## Site metadata
 
-This theme provides an `SEO` component. For this component to work, you need to
-define
+This theme exports an `SEO` component. For this component to work, you need to
+define the following
 [site metadata](https://www.gatsbyjs.com/docs/gatsby-config/#sitemetadata) in
 your site's `gatsby-config.js`:
 

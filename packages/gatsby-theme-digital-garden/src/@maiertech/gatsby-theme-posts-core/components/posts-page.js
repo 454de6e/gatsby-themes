@@ -5,11 +5,12 @@ import {
   Container,
   Grid,
   Heading,
-  Layout,
   Link,
   PostPreview,
   Themed,
 } from '@maiertech/gatsby-theme-theme-ui';
+
+import Layout from '../../../components/layout';
 
 const PostsPage = ({ data, location }) => {
   const posts = data.allPost.posts.map(

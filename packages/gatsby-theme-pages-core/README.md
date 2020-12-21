@@ -1,4 +1,4 @@
-# @maiertech/gatsby-theme-core
+# @maiertech/gatsby-theme-pages-core
 
 A [Gatsby theme](https://www.gatsbyjs.com/docs/themes/what-are-gatsby-themes/)
 to add a `Page` type to Gatsby sites.
