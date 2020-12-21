@@ -1,12 +1,9 @@
 import React from 'react';
 import { object } from 'prop-types';
-import {
-  Container,
-  Layout,
-  Tags,
-  Themed,
-} from '@maiertech/gatsby-theme-theme-ui';
+import { Container, Tags, Themed } from '@maiertech/gatsby-theme-theme-ui';
 import { SEO } from '@maiertech/gatsby-theme-base';
+
+import Layout from '../../../components/layout';
 
 const TagsPage = ({ location, pageContext }) => (
   <Layout location={location}>

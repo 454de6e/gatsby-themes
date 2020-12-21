@@ -13,17 +13,18 @@ This theme on the other hand, is opinionated about styling. It wires up
 as theme. You can use any other Theme UI preset by shadowing `index.js` of
 [`gatsby-plugin-theme-ui`](https://theme-ui.com/packages/gatsby-plugin/).
 
-## Components
+## Site metadata
 
-This theme provides a `Laout` component. For this component to work, you need to
-define
+This theme exports a `Layout` component. For this component to work, you need to
+define the following
 [site metadata](https://www.gatsbyjs.com/docs/gatsby-config/#sitemetadata) in
 your site's `gatsby-config.js`:
 
-| Key        | Required | Description                       |
-| :--------- | :------- | :-------------------------------- |
-| siteTitle  | ✓        | Site title for header and footer. |
-| siteAuthor | ✓        | Site for footer.                  |
+| Key          | Required | Description                             |
+| :----------- | :------- | :-------------------------------------- |
+| siteTitle    | ✓        | Site title for header and footer.       |
+| siteAuthor   | ✓        | Site author for footer.                 |
+| siteNavLinks | ✓        | Navigation links for header and footer. |
 
 ## Plugins
 

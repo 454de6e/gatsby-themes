@@ -4,12 +4,13 @@ import { SEO } from '@maiertech/gatsby-theme-base';
 import {
   Container,
   Heading,
-  Layout,
   PostPreview,
   Tags,
 } from '@maiertech/gatsby-theme-theme-ui';
 import { createPath } from '@maiertech/gatsby-helpers';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+
+import Layout from '../../../components/layout';
 
 const ShadowedPostPage = ({ data, location, pageContext }) => {
   const { title, author, date, datetime, description, tags, body } = data.post;

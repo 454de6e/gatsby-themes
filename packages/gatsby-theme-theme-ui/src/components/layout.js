@@ -1,18 +1,19 @@
 import React from 'react';
 import { node } from 'prop-types';
-import { Footer, Header } from '@maiertech/components';
 import { Box, Flex, Themed } from 'theme-ui';
 import { Global } from '@emotion/react';
 
 import useSiteMetadata from '../use-site-metadata';
 
-const links = [
-  { href: '/posts/', text: 'Posts' },
-  { href: '/notes/', text: 'Notes' },
-];
+import Header from './header';
+import Footer from './footer';
 
 const Layout = ({ children }) => {
-  const { siteTitle: title, siteAuthor: author } = useSiteMetadata();
+  const {
+    siteTitle: title,
+    siteAuthor: author,
+    siteNavLinks: links,
+  } = useSiteMetadata();
   // To make sticky footer work all elements up the hierarchy must set height to 100%.
   return (
     <Themed.root>

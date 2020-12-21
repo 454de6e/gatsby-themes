@@ -4,13 +4,14 @@ import { SEO } from '@maiertech/gatsby-theme-base';
 import {
   Container,
   Heading,
-  Layout,
   Link,
   PostPreview,
   Tags,
   Themed,
 } from '@maiertech/gatsby-theme-theme-ui';
 import { Link as GatsbyLink } from 'gatsby';
+
+import Layout from '../../../components/layout';
 
 const ShadowedTagPage = ({ data, location, pageContext }) => {
   const { tag } = pageContext;

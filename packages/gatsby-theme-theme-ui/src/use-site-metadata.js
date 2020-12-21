@@ -7,6 +7,10 @@ const useSiteMetadata = () => {
         siteMetadata {
           siteTitle
           siteAuthor
+          siteNavLinks {
+            href
+            text
+          }
         }
       }
     }
