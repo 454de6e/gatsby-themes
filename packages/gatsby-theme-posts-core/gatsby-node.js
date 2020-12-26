@@ -79,20 +79,19 @@ module.exports.onCreateNode = (
     return;
   }
 
-  const nodeData = {
-    collection,
-    ...node.frontmatter,
-  };
-
   const { relativeDirectory } = parent;
 
-  nodeData.path = createPath(
-    basePath,
+  const nodeData = {
+    ...node.frontmatter,
     collection,
-    // Decide whether or not to omit relativeDirectory in path.
-    fullRelativePath ? relativeDirectory : '',
-    slugify(nodeData.title)
-  );
+    path: createPath(
+      basePath,
+      collection,
+      // Decide whether or not to omit relativeDirectory in path.
+      fullRelativePath ? relativeDirectory : '',
+      slugify(node.frontmatter.title)
+    ),
+  };
 
   const nodeType = 'MdxPost';
 
