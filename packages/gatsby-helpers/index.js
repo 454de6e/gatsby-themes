@@ -7,13 +7,20 @@ const slugify = require('@sindresorhus/slugify');
 module.exports.slugify = slugify;
 
 // Helper to create path from segments and add leading and trailing /.
-module.exports.createPath = (...segments) => {
+const createPath = (...segments) => {
   const path = join(...segments);
   // Add leading and trailing / if there are none.
   // /^\/*/ matches zero or more occurrences of / at the beginning.
   // /\/*$/ matches zero or more occurrences of / at the end.
-  return path.replace(/^\/*/, `/`).replace(/\/*$/, `/`);
+  return path.replace(/^\/*/, '/').replace(/\/*$/, '/');
 };
+module.exports.createPath = createPath;
+
+// Helper to assemble a URL from a base and a path.
+// Base can be with or without trailing /.
+// Created URL always ends with trailing /.
+module.exports.createUrl = (base, path) =>
+  `${base.replace(/\/$/, '')}${createPath(path)}`;
 
 // Helper to ensure that a path exists.
 /* istanbul ignore next */

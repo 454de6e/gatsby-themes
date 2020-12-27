@@ -14,20 +14,22 @@ to add a `Page` type to Gatsby sites.
 
 ## Frontmatter
 
-| Key         | Required | Description                          |
-| :---------- | :------- | :----------------------------------- |
-| title       | ✓        | Post title, which will be slugified. |
-| description | ✓        | Description for SEO and previews.    |
+| Key          | Required | Description                          |
+| :----------- | :------- | :----------------------------------- |
+| title        | ✓        | Post title, which will be slugified. |
+| description  | ✓        | Description for SEO and previews.    |
+| canonicalUrl |          | Canonical URL for SEO.               |
 
 ## `Page` interface
 
-| Field       | Type      | Description       |
-| :---------- | :-------- | :---------------- |
-| id          | `ID!`     | Gatsby node GUID. |
-| title       | `String!` | From frontmatter. |
-| description | `String!` | From frontmatter. |
-| body        | `String!` | MDX body.         |
-| path        | `String!` | Page path.        |
+| Field        | Type      | Description            |
+| :----------- | :-------- | :--------------------- |
+| id           | `ID!`     | Gatsby node GUID.      |
+| title        | `String!` | From frontmatter.      |
+| description  | `String!` | From frontmatter.      |
+| body         | `String!` | MDX body.              |
+| path         | `String!` | Page path.             |
+| canonicalUrl | `String`  | Canonical URL for SEO. |
 
 Type `MdxPage` implements `Page`. If you prefer to use a data source other than
 MDX files, you can write a child theme that uses the `Page` interface.

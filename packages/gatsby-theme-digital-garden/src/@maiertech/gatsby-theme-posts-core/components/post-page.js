@@ -13,7 +13,16 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../../../components/layout';
 
 const ShadowedPostPage = ({ data, location, pageContext }) => {
-  const { title, author, date, datetime, description, tags, body } = data.post;
+  const {
+    title,
+    author,
+    date,
+    datetime,
+    description,
+    tags,
+    canonicalUrl,
+    body,
+  } = data.post;
   const post = {
     title: (
       <Heading as="h1" sx={{ variant: 'styles.h1', mb: 3 }}>
@@ -31,7 +40,12 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
   }));
   return (
     <Layout location={location}>
-      <SEO title={title} description={description} path={location.pathname} />
+      <SEO
+        title={title}
+        description={description}
+        canonicalUrl={canonicalUrl}
+        path={location.pathname}
+      />
       <Container variant="narrow">
         <PostPreview post={post} mb={3} />
         <Tags values={values} mb={3} />
