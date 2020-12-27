@@ -62,18 +62,18 @@ module.exports.onCreateNode = (
     return;
   }
 
-  const nodeData = {
-    ...node.frontmatter,
-  };
-
   const { relativeDirectory } = parent;
 
-  nodeData.path = createPath(
-    basePath,
-    // Decide whether or not to omit relativeDirectory in path.
-    fullRelativePath ? relativeDirectory : '',
-    slugify(nodeData.title)
-  );
+  const nodeData = {
+    ...node.frontmatter,
+    path: createPath(
+      basePath,
+      // Decide whether or not to omit relativeDirectory in path.
+      fullRelativePath ? relativeDirectory : '',
+      node.frontmatter.slug || slugify(node.frontmatter.title)
+    ),
+    slug: undefined,
+  };
 
   const nodeType = 'MdxPage';
 

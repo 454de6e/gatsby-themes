@@ -91,8 +91,9 @@ module.exports.onCreateNode = (
       collection,
       // Decide whether or not to omit relativeDirectory in path.
       fullRelativePath ? relativeDirectory : '',
-      slugify(node.frontmatter.title)
+      node.frontmatter.slug || slugify(node.frontmatter.title)
     ),
+    slug: undefined,
   };
 
   const nodeType = 'MdxPost';

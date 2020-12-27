@@ -17,6 +17,7 @@ to add a `Page` type to Gatsby sites.
 | Key          | Required | Description                          |
 | :----------- | :------- | :----------------------------------- |
 | title        | ✓        | Post title, which will be slugified. |
+| slug         |          | Override slugified title.            |
 | description  | ✓        | Description for SEO and previews.    |
 | canonicalUrl |          | Canonical URL for SEO.               |
 
