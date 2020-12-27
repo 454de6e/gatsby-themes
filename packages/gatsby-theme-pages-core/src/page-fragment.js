@@ -8,5 +8,6 @@ export const fragment = graphql`
     image
     body
     path
+    canonicalUrl
   }
 `;

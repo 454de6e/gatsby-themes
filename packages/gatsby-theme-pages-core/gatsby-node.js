@@ -23,6 +23,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
         image: String
         body: String!
         path: String!
+        canonicalUrl: String
       }
       type MdxPage implements Node & Page {
         id: ID!
@@ -31,6 +32,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
         image: String
         body: String!
         path: String!
+        canonicalUrl: String
       }
     `);
 };

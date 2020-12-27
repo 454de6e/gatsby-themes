@@ -7,10 +7,15 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../../components/layout';
 
 const ShadowedPage = ({ data, location }) => {
-  const { title, description, body } = data.page;
+  const { title, description, canonicalUrl, body } = data.page;
   return (
     <Layout location={location}>
-      <SEO title={title} description={description} path={location.pathname} />
+      <SEO
+        title={title}
+        description={description}
+        canonicalUrl={canonicalUrl}
+        path={location.pathname}
+      />
       <Container variant="narrow">
         <Themed.h1>{title}</Themed.h1>
         <MDXRenderer>{body}</MDXRenderer>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { arrayOf, node, string } from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { createPath } from '@maiertech/gatsby-helpers';
+import { createUrl } from '@maiertech/gatsby-helpers';
 
 import useSiteMetadata from '../use-site-metadata';
 
@@ -16,7 +16,7 @@ const SEO = ({
 }) => {
   const { siteTitle, siteUrl, siteTwitter } = useSiteMetadata();
   const language = lang || 'en';
-  const url = canonicalUrl ? canonicalUrl : createPath(siteUrl, path);
+  const url = canonicalUrl ? canonicalUrl : createUrl(siteUrl, path);
   return (
     <Helmet title={title} titleTemplate={`%s | ${siteTitle}`}>
       <html lang={language} />
@@ -30,7 +30,7 @@ const SEO = ({
       <meta name="twitter:url" content={url} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:creator" content={siteTwitter} />
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <link rel="canonical" href={url} />
       {children}
     </Helmet>
   );

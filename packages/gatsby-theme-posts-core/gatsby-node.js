@@ -38,6 +38,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
       tags: [String!]
       body: String!
       path: String!
+      canonicalUrl: String
     }
 
     type MdxPost implements Node & Post {
@@ -50,6 +51,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
       tags: [String!]
       body: String!
       path: String!
+      canonicalUrl: String
     }
   `);
 };
