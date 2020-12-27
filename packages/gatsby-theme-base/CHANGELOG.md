@@ -1,5 +1,16 @@
 # @maiertech/gatsby-theme-base
 
+## 0.3.0
+
+### Minor Changes
+
+- f90cf7b: Always add canonical URL in SEO component
+
+### Patch Changes
+
+- Updated dependencies [f90cf7b]
+  - @maiertech/gatsby-helpers@0.3.0
+
 ## 0.2.0
 
 ### Minor Changes

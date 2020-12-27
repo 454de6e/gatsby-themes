@@ -1,5 +1,33 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.3.0
+
+### Minor Changes
+
+- f90cf7b: Allow overriding canonical URL for posts and pages in frontmatter
+- 13cd12c: Add basePath theme option
+- c5cc506: Add support for @maiertech/gatsby-theme-pages-core
+- f90cf7b: Add canonical URL to all pages
+
+### Patch Changes
+
+- 13cd12c: Allow layout to be shadowed
+- c6e72a5: Add robots.txt to disallow /notes/
+- Updated dependencies [3044288]
+- Updated dependencies [d2d17bf]
+- Updated dependencies [53c93c5]
+- Updated dependencies [f90cf7b]
+- Updated dependencies [f90cf7b]
+- Updated dependencies [13cd12c]
+- Updated dependencies [13cd12c]
+- Updated dependencies [f90cf7b]
+  - @maiertech/gatsby-theme-posts-core@0.6.0
+  - @maiertech/gatsby-theme-pages-core@0.3.0
+  - @maiertech/gatsby-helpers@0.3.0
+  - @maiertech/gatsby-theme-theme-ui@0.3.0
+  - @maiertech/gatsby-theme-base@0.3.0
+  - @maiertech/gatsby-theme-tags-core@0.5.1
+
 ## 0.2.0
 
 ### Minor Changes
