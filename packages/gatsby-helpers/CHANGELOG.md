@@ -1,5 +1,11 @@
 # @maiertech/gatsby-helpers
 
+## 0.3.0
+
+### Minor Changes
+
+- f90cf7b: Add createUrl helper
+
 ## 0.2.1
 
 ### Patch Changes

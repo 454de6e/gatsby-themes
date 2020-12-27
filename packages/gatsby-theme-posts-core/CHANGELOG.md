@@ -1,5 +1,19 @@
 # @maiertech/gatsby-theme-posts-core
 
+## 0.6.0
+
+### Minor Changes
+
+- d2d17bf: Allow overriding slug in frontmatter
+- f90cf7b: Add support for canonicalUrl in frontmatter
+
+### Patch Changes
+
+- 3044288: Prevent collection from being overridden by frontmatter
+- 53c93c5: Fix paths generated with fullRelativePath option
+- Updated dependencies [f90cf7b]
+  - @maiertech/gatsby-helpers@0.3.0
+
 ## 0.5.0
 
 ### Minor Changes

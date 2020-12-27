@@ -1,5 +1,15 @@
 # @maiertech/gatsby-theme-theme-ui
 
+## 0.3.0
+
+### Minor Changes
+
+- 13cd12c: Read nav links from siteMetadata (siteNavLinks)
+
+### Patch Changes
+
+- 13cd12c: Allow shadowing header and footer
+
 ## 0.2.0
 
 ### Minor Changes
