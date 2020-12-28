@@ -7,11 +7,12 @@ define the following
 [site metadata](https://www.gatsbyjs.com/docs/gatsby-config/#sitemetadata) in
 your site's `gatsby-config.js`:
 
-| Key         | Required | Description                                                              |
-| :---------- | :------- | :----------------------------------------------------------------------- |
-| siteTitle   | ✓        | Site title for SEO.                                                      |
-| siteUrl     | ✓        | URL from which the production site is served. Used for sitemap creation. |
-| siteTwitter | ✓        | Site Twitter username for SEO.                                           |
+| Key             | Required | Description                                                              |
+| :-------------- | :------- | :----------------------------------------------------------------------- |
+| siteTitle       | ✓        | Site title for SEO.                                                      |
+| siteDescription |          | Optional site description for SEO of the homepage.                       |
+| siteUrl         | ✓        | URL from which the production site is served. Used for sitemap creation. |
+| siteTwitter     | ✓        | Site Twitter username for SEO.                                           |
 
 ## Plugins
 
