@@ -10,10 +10,11 @@ import {
   PostPreview,
   Themed,
 } from '@maiertech/gatsby-theme-theme-ui';
+import { graphql } from 'gatsby';
 
-import Layout from '../../../components/layout';
+import Layout from '../components/layout';
 
-const PostsPage = ({ data, location }) => {
+const NotFound = ({ data, location }) => {
   const posts = data.allPost.posts.map(
     ({ id, title, date, datetime, path }) => ({
       id,
@@ -34,9 +35,17 @@ const PostsPage = ({ data, location }) => {
   );
   return (
     <Layout location={location}>
-      <SEO title="Posts" description="All posts." path={location.pathname} />
+      <SEO
+        title="404: Not Found"
+        description="Oops! The page you were looking for does not exist."
+        path={location.pathname}
+      />
       <Container variant="narrow">
-        <Themed.h1>Posts</Themed.h1>
+        <Themed.h1>404: Not Found</Themed.h1>
+        <Themed.p>
+          Oops! The page you were looking for does not exist. Read one of our
+          latest posts instead:
+        </Themed.p>
         <Grid gap={4} columns={1}>
           {posts.map(({ id, path, ...post }) => (
             <Link
@@ -64,9 +73,23 @@ const PostsPage = ({ data, location }) => {
   );
 };
 
-PostsPage.propTypes = {
+NotFound.propTypes = {
   data: object.isRequired,
   location: object.isRequired,
 };
 
-export default PostsPage;
+export default NotFound;
+
+export const query = graphql`
+  query {
+    allPost(
+      sort: { fields: [date, title], order: [DESC, ASC] }
+      filter: { collection: { eq: "posts" } }
+      limit: 3
+    ) {
+      posts: nodes {
+        ...PostFragment
+      }
+    }
+  }
+`;

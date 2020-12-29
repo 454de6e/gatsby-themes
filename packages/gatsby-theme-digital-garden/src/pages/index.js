@@ -24,8 +24,6 @@ const Homepage = ({ data, location }) => {
           as="h1"
           sx={{
             variant: 'styles.h1',
-            // Override color from variant.
-            color: 'inherit',
             mb: 3,
           }}
         >
