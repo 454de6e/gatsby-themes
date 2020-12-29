@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-base
 
+## 0.4.0
+
+### Minor Changes
+
+- e917f64: Export useSiteMetadata
+
 ## 0.3.0
 
 ### Minor Changes
