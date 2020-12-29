@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-posts-core
 
+## 0.6.1
+
+### Patch Changes
+
+- 4215e76: Update posts page template
+
 ## 0.6.0
 
 ### Minor Changes

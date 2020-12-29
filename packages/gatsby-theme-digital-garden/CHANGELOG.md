@@ -1,5 +1,19 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.4.0
+
+### Minor Changes
+
+- 4215e76: Add 404 page
+- e917f64: Add simple homepage
+
+### Patch Changes
+
+- Updated dependencies [4215e76]
+- Updated dependencies [e917f64]
+  - @maiertech/gatsby-theme-posts-core@0.6.1
+  - @maiertech/gatsby-theme-base@0.4.0
+
 ## 0.3.0
 
 ### Minor Changes
