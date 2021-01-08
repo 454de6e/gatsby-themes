@@ -14,12 +14,12 @@ to add a `Page` type to Gatsby sites.
 
 ## Frontmatter
 
-| Key          | Required | Description                          |
-| :----------- | :------- | :----------------------------------- |
-| title        | ✓        | Post title, which will be slugified. |
-| slug         |          | Override slugified title.            |
-| description  | ✓        | Description for SEO and previews.    |
-| canonicalUrl |          | Canonical URL for SEO.               |
+| Key           | Required | Description                          |
+| :------------ | :------- | :----------------------------------- |
+| title         | ✓        | Post title, which will be slugified. |
+| slug          |          | Override slugified title.            |
+| description   | ✓        | Description for SEO and previews.    |
+| canonical_url |          | Canonical URL for SEO.               |
 
 ## `Page` interface
 
