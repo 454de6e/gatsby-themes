@@ -2,15 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "yarn test",
-      "type": "pwa-node",
-      "request": "launch",
-      "program": "${workspaceFolder}/node_modules/.bin/jest",
-      "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal"
-    },
-    {
-      "name": "yarn workspace core-themes-example run dev",
+      "name": "core-themes-example",
       "type": "pwa-node",
       "request": "launch",
       "program": "${workspaceFolder}/examples/core-themes/node_modules/.bin/gatsby",
@@ -20,13 +12,29 @@
       "console": "integratedTerminal"
     },
     {
-      "name": "yarn workspace digital-garden-example run dev",
+      "name": "digital-garden-example",
       "type": "pwa-node",
       "request": "launch",
       "program": "${workspaceFolder}/examples/digital-garden/node_modules/.bin/gatsby",
       "cwd": "${workspaceFolder}/examples/digital-garden",
       "args": ["develop"],
       "runtimeArgs": ["--nolazy"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "lint-staged",
+      "type": "pwa-node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/lint-staged",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "test",
+      "type": "pwa-node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
     }
   ]
