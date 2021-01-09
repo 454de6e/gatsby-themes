@@ -57,6 +57,10 @@ module.exports = (themeOptions) => {
       'gatsby-plugin-mdx',
       '@maiertech/gatsby-theme-base',
       '@maiertech/gatsby-theme-theme-ui',
+      {
+        resolve: 'gatsby-plugin-sitemap',
+        options: { exclude: ['/notes/**/*', '/notes/'] },
+      },
     ],
   };
 };

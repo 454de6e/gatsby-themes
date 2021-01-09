@@ -16,7 +16,6 @@ your site's `gatsby-config.js`:
 
 ## Plugins
 
-| Plugin                                                                                     | Description                                                                                                             |
-| :----------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| [gatsby-plugin-sitemap](https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/)           | Create a [sitemap](https://developers.google.com/search/docs/advanced/sitemaps/overview) that you can submit to Google. |
-| [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/) | Required to make the `SEO` component work.                                                                              |
+| Plugin                                                                                     | Description                                |
+| :----------------------------------------------------------------------------------------- | :----------------------------------------- |
+| [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/) | Required to make the `SEO` component work. |

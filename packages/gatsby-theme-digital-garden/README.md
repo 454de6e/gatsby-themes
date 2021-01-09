@@ -39,13 +39,15 @@ fields:
 | description | ✓        | A brief description of what the note is about.               |
 | tags        | ✓        | One or more tags are required to be able to discover a note. |
 
-A note does not have a date, because a note is a raw and unpolished type of
-content. Most notes will receive occasional updates, but will essentially never
-go anywhere. Some notes on which I make a few iterations will graduate to a
-post.
+Notes do not have dates, because they are raw and unpolished. Most notes will
+receive a few updates and then never change again. Some notes will receive more
+updates and slowly mature and can then graduate into a post. Notes can be
+renamed or deleted at any time. Due to their unfinished nature, they are exluded
+from the generated site map and disallowed in `robots.txt`.
 
 ### Posts
 
-Posts are located in `content/posts` and add `author` and `date` fields. A post
-is normally the result of several iterations on a note and is more polished than
-a note. You can think of its date as the graduation date from notes academy.
+Posts are located in `content/posts` and add `author` and `date` fields. They
+are usually the result of several iterations on one or many notes and are much
+more polished than notes. You can think of a post date as the graduation date of
+the underlying notes. When a note has been used for a post, it can be deleted.
