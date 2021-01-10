@@ -12,8 +12,20 @@ module.exports = (themeOptions) => {
           contentPath: 'content/posts',
           fullRelativePath: false,
           mdxOtherwiseConfigured: true,
-          // This option has no effect other than that it passed through to page templates.
-          tagCollection: 'posts/tags',
+          // This option has no effect other than that it is passed through to page templates.
+          tagCollection: 'tags',
+        },
+      },
+      {
+        resolve: '@maiertech/gatsby-theme-posts-core',
+        options: {
+          basePath,
+          collection: 'chunks',
+          contentPath: 'content/chunks',
+          fullRelativePath: false,
+          mdxOtherwiseConfigured: true,
+          // This option has no effect other than that it is passed through to page templates.
+          tagCollection: 'tags',
         },
       },
       {
@@ -41,8 +53,8 @@ module.exports = (themeOptions) => {
         options: {
           basePath,
           // This config results in tage pages being shifted down one level.
-          tagCollection: 'posts/tags',
-          mdxCollections: ['posts'],
+          // tagCollection: 'tags',
+          mdxCollections: ['posts', 'chunks'],
         },
       },
       {

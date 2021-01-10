@@ -16,7 +16,7 @@ import Layout from '../components/layout';
 
 const Homepage = ({ data, location }) => {
   const { siteDescription } = useSiteMetadata();
-  const posts = data.allPost.posts.map(
+  const posts = data.allPost.nodes.map(
     ({ id, title, date, datetime, description, path }) => ({
       id,
       title: (
@@ -85,10 +85,10 @@ export const query = graphql`
   query {
     allPost(
       sort: { fields: [date, title], order: [DESC, ASC] }
-      filter: { collection: { eq: "posts" } }
+      filter: { collection: { in: ["posts", "chunks"] } }
       limit: 3
     ) {
-      posts: nodes {
+      nodes {
         ...PostFragment
       }
     }
