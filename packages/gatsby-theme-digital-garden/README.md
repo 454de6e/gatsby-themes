@@ -41,13 +41,22 @@ fields:
 
 Notes do not have dates, because they are raw and unpolished. Most notes will
 receive a few updates and then never change again. Some notes will receive more
-updates and slowly mature and can then graduate into a post. Notes can be
-renamed or deleted at any time. Due to their unfinished nature, they are exluded
-from the generated site map and disallowed in `robots.txt`.
+updates and slowly mature. Notes can be renamed or deleted at any time, there is
+no guarantee that their URL is stable. Due to their unfinished nature, they are
+exluded from the generated sitemap and disallowed in `robots.txt`.
 
 ### Posts
 
 Posts are located in `content/posts` and add `author` and `date` fields. They
 are usually the result of several iterations on one or many notes and are much
-more polished than notes. You can think of a post date as the graduation date of
-the underlying notes. When a note has been used for a post, it can be deleted.
+more polished than notes. When a note has been used for a post, it can be
+deleted.
+
+### Chunks
+
+Chunks are located `content/chunks` and use the same metadata as posts. Chunks
+can be thought of as short posts. They should be concise and self-contained.
+Chunks encourage publishing shorter posts more frequently. A Chunk can be
+derived from a note that is in good enough shape to be published. Chunks can
+also be written directly. Chunks can also be incorporated into posts, but their
+URL is stable. Tweets can be considered as a special type of chunks.

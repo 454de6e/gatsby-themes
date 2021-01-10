@@ -6,6 +6,7 @@ module.exports = {
       '@maiertech/gatsby-theme-digital-garden is a Gatsby theme to help you build your own digital garden.',
     siteNavLinks: [
       { href: '/posts/', text: 'Posts' },
+      { href: '/chunks/', text: 'Chunks' },
       { href: '/notes/', text: 'Notes' },
       { href: '/about/', text: 'About' },
     ],

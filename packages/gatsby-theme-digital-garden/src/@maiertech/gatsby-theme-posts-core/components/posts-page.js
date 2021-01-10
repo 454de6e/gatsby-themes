@@ -8,12 +8,11 @@ import {
   Heading,
   Link,
   PostPreview,
-  Themed,
 } from '@maiertech/gatsby-theme-theme-ui';
 
 import Layout from '../../../components/layout';
 
-const PostsPage = ({ data, location }) => {
+const PostsPage = ({ data, location, pageContext }) => {
   const posts = data.allPost.posts.map(
     ({ id, title, date, datetime, path }) => ({
       id,
@@ -36,7 +35,13 @@ const PostsPage = ({ data, location }) => {
     <Layout location={location}>
       <SEO title="Posts" description="All posts." path={location.pathname} />
       <Container variant="narrow">
-        <Themed.h1>Posts</Themed.h1>
+        <Heading
+          as="h1"
+          sx={{ textTransform: 'capitalize' }}
+          variant="styles.h1"
+        >
+          {pageContext.themeOptions.collection}
+        </Heading>
         <Grid gap={4} columns={1}>
           {posts.map(({ id, path, ...post }) => (
             <Link
@@ -67,6 +72,7 @@ const PostsPage = ({ data, location }) => {
 PostsPage.propTypes = {
   data: object.isRequired,
   location: object.isRequired,
+  pageContext: object.isRequired,
 };
 
 export default PostsPage;

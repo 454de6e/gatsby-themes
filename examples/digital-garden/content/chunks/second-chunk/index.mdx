@@ -1,0 +1,53 @@
+---
+title: Duis nulla aute magna consectetur proident velit
+author: Thilo Maier
+date: 2021-01-05
+description:
+  Occaecat sit officia duis quis occaecat eiusmod labore incididunt sit id eu
+  amet. Dolor voluptate adipisicing cupidatat aliquip nisi minim ea Lorem non
+  consectetur laborum exercitation in.
+tags:
+  - tag4
+---
+
+Deserunt voluptate labore aliqua exercitation veniam enim elit anim. Consectetur
+elit do culpa ea. Et ullamco consectetur laborum deserunt culpa dolor culpa nisi
+Lorem consectetur proident. Ullamco velit anim dolore dolor consequat elit
+ullamco. Exercitation amet fugiat deserunt proident laboris occaecat elit sint.
+Exercitation deserunt ex culpa nisi tempor laborum nulla exercitation duis
+cillum cillum sint sit sunt. Commodo ad nulla mollit quis enim pariatur est
+proident adipisicing ipsum commodo labore Lorem.
+
+```js
+const micromatch = require('micromatch');
+const prettier = require('prettier');
+
+// Figure out all extensions supported by Prettier.
+const prettierSupportedExtensions = prettier
+  .getSupportInfo()
+  .languages.map(({ extensions }) => extensions)
+  .flat();
+
+const addQuotes = (a) => `"${a}"`;
+
+module.exports = (allStagedFiles) => {
+  // Match files for ESLint including dirs and files starting with dot.
+  const eslintFiles = micromatch(allStagedFiles, ['**/*.js'], { dot: true });
+  // Match for Prettier including dirs and files starting with dot.
+  const prettierFiles = micromatch(
+    allStagedFiles,
+    prettierSupportedExtensions.map((extension) => `**/*${extension}`),
+    { dot: true }
+  );
+
+  // Array of linters to be run in this sequence.
+  const linters = [];
+  // Only add linters when there are staged files for them.
+  // `prettier --write` makes lint-staged never terminate if prettierFiles is empty.
+  if (eslintFiles.length > 0)
+    linters.push(`eslint --fix ${eslintFiles.join(' ')}`);
+  if (prettierFiles.length > 0)
+    linters.push(`prettier --write ${prettierFiles.map(addQuotes).join(' ')}`);
+  return linters;
+};
+```
