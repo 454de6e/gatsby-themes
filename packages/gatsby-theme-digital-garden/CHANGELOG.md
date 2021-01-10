@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.6.0
+
+### Minor Changes
+
+- 37898a9: Add content type chunks
+
 ## 0.5.0
 
 ### Minor Changes
