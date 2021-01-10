@@ -1,5 +1,21 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.5.0
+
+### Minor Changes
+
+- 74bddbd: Rename canonicalUrl to canonical_url in frontmatter for dev.to
+  compatibility
+
+### Patch Changes
+
+- 4571ca6: Excludes notes from generated sitemap
+- Updated dependencies [4571ca6]
+- Updated dependencies [74bddbd]
+  - @maiertech/gatsby-theme-base@0.5.0
+  - @maiertech/gatsby-theme-pages-core@0.4.0
+  - @maiertech/gatsby-theme-posts-core@0.7.0
+
 ## 0.4.0
 
 ### Minor Changes
