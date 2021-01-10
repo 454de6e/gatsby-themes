@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-base
 
+## 0.5.0
+
+### Minor Changes
+
+- 4571ca6: Remove gatsby-plugin-sitemap
+
 ## 0.4.0
 
 ### Minor Changes

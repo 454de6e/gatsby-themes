@@ -1,5 +1,12 @@
 # @maiertech/gatsby-theme-posts-core
 
+## 0.7.0
+
+### Minor Changes
+
+- 74bddbd: Rename canonicalUrl to canonical_url in frontmatter for dev.to
+  compatibility
+
 ## 0.6.1
 
 ### Patch Changes
