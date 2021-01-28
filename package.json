@@ -19,7 +19,7 @@
     "test:watch": "jest --watch"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.11.2",
+    "@changesets/cli": "^2.14.0",
     "@maiertech/eslint-config": "^0.16.0",
     "@maiertech/prettier-config": "^0.2.1",
     "eslint": "^7.17.0",

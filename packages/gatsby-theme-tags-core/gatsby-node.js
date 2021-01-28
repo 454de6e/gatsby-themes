@@ -13,6 +13,8 @@ module.exports.createPages = async (
   const { basePath, tagCollection, mdxCollections } = options;
 
   // Use `group` to retrieve a list of all tags used in all supported mdxCollections.
+  // This query throws an error if there is not at least one tag in any of the collections
+  // The error is thrown because Gatsby does not know frontmatter___tags.
   const result = await graphql(
     `
       query($mdxCollections: [String]!) {
