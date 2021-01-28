@@ -5,8 +5,7 @@ to add tagging support to MDX pages. This theme processes nodes of type `Mdx`
 only, which are created by
 [`gatsby-plugin-mdx`](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx).
 Only those `Mdx` nodes are processed, which fulfill the compatibility
-requirements described below. For this theme to work, you need to have **at
-least one tag in any tagged collection**.
+requirements described below.
 
 ## Options
 
@@ -54,3 +53,42 @@ availalbe via the
 which is used in the
 [`tag-query.js`](https://github.com/maiertech/gatsby-themes/blob/master/packages/gatsby-theme-tags-core/src/templates/tag-query.js)
 template.
+
+## Potential pitfalls
+
+@maiertech/gatsby-theme-core-tags uses
+[the following query in `gatsby-config.js`](https://github.com/maiertech/gatsby-themes/blob/master/packages/gatsby-theme-tags-core/gatsby-node.js#L18-L30)
+to retrieve all tags:
+
+```js
+const result = await graphql(
+  `
+    query($mdxCollections: [String]!) {
+      allMdx(filter: { fields: { collection: { in: $mdxCollections } } }) {
+        group(field: frontmatter___tags) {
+          tag: fieldValue
+          count: totalCount
+        }
+      }
+    }
+  `,
+  { mdxCollections }
+);
+```
+
+This query uses Gatsby's
+[group](https://www.gatsbyjs.com/docs/graphql-reference/#group) on
+`frontmatter___tags`. This field is inferred by Gatsby and exists only when
+there is at least one tag in any tagged collection. You also need to be aware
+that the moment you add @maiertech/gatsby-theme-tags-core to your dependencies,
+Gatsby will [extract](https://www.gatsbyjs.com/docs/query-extraction/) and
+[run](https://www.gatsbyjs.com/docs/query-execution/#query-execution) the query
+exported in the
+[`tag-query.js`](https://github.com/maiertech/gatsby-themes/blob/master/packages/gatsby-theme-tags-core/src/templates/tag-query.js)
+template. This fails as well with error **GraphQLError: Field "tags" is not
+defined by type MdxFrontmatterFilterInput.** when there are no tags. It is not
+clear why Gatsby extracts and runs the query even when the theme is not
+configured in `gatsby-config.js`.
+
+This means that you cannot add @maiertech/gatsby-theme-tags-core as dependency
+without also adding at least one tag to any tagged collection.
