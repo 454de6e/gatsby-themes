@@ -5,7 +5,8 @@ to add tagging support to MDX pages. This theme processes nodes of type `Mdx`
 only, which are created by
 [`gatsby-plugin-mdx`](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx).
 Only those `Mdx` nodes are processed, which fulfill the compatibility
-requirements described below.
+requirements described below. For this theme to work, you need to have **at
+least one tag in any tagged collection**.
 
 ## Options
 
