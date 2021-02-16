@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-posts-core
 
+## 0.8.0
+
+### Minor Changes
+
+- 8340abe: Add support for images prop in frontmatter
+
 ## 0.7.0
 
 ### Minor Changes
