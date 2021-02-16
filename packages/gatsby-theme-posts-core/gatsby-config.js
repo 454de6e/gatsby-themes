@@ -14,6 +14,8 @@ module.exports = (themeOptions) => {
           path: contentPath,
         },
       },
+      'gatsby-plugin-sharp',
+      'gatsby-transformer-sharp',
     ].filter(Boolean),
   };
 };

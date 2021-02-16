@@ -11,6 +11,11 @@ export const fragment = graphql`
     datetime: date(formatString: "YYYY-MM-DD")
     description
     tags
+    images {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
     body
     path
     canonicalUrl

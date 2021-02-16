@@ -67,6 +67,7 @@ module.exports = (themeOptions) => {
         },
       },
       'gatsby-plugin-mdx',
+      'gatsby-plugin-image',
       '@maiertech/gatsby-theme-base',
       '@maiertech/gatsby-theme-theme-ui',
       {
