@@ -12,7 +12,12 @@ description:
 tags:
   - tag1
   - tag2
+images:
+  - ./colton-duke-UExx0KnnkjY-unsplash.jpg
+  - ./ran-berkovich-axpjgviJWmk-unsplash.jpg
 ---
+
+import { Box, GatsbyImage } from '@maiertech/gatsby-theme-digital-garden';
 
 Consequat Lorem commodo sint labore proident cupidatat id ea nostrud nulla anim
 velit qui. Fugiat est aliqua magna amet labore ea sunt. Sint exercitation
@@ -30,7 +35,23 @@ sit non fugiat adipisicing magna reprehenderit sint in eiusmod exercitation sit.
 Minim velit exercitation in dolor veniam duis. Tempor labore velit reprehenderit
 nostrud magna excepteur exercitation anim.
 
+<Box mb={3}>
+  <GatsbyImage
+    image={props.images[0]}
+    alt="Brooklyn Bridge at sunset."
+    loading="eager"
+  />
+</Box>
+
 Ea ea qui et proident laborum adipisicing est dolore magna consequat duis
 proident aliquip. Adipisicing enim exercitation labore laborum enim tempor Lorem
 ea. Non excepteur esse labore officia nisi est aute esse. Duis voluptate culpa
 cillum aute non.
+
+<Box mb={3}>
+  <GatsbyImage
+    image={props.images[1]}
+    alt="The Vessel at Huson Yards."
+    loading="lazy"
+  />
+</Box>

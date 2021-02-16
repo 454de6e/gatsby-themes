@@ -36,6 +36,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       description: String!
       tags: [String!]
+      images: [File!]
       body: String!
       path: String!
       canonicalUrl: String
@@ -49,6 +50,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       description: String!
       tags: [String!]
+      images: [File!] @fileByRelativePath
       body: String!
       path: String!
       canonicalUrl: String

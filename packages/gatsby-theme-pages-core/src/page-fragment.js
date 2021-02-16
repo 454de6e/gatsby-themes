@@ -6,7 +6,11 @@ export const fragment = graphql`
     id
     title
     description
-    image
+    images {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
     body
     path
     canonicalUrl

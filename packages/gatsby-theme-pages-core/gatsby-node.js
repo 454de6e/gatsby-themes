@@ -20,7 +20,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
         id: ID!
         title: String!
         description: String!
-        image: String
+        images: [File!]
         body: String!
         path: String!
         canonicalUrl: String
@@ -29,7 +29,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
         id: ID!
         title: String!
         description: String!
-        image: String
+        images: [File!] @fileByRelativePath
         body: String!
         path: String!
         canonicalUrl: String

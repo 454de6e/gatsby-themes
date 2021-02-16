@@ -20,9 +20,12 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
     datetime,
     description,
     tags,
+    images,
     canonicalUrl,
     body,
   } = data.post;
+
+  // Create post for PostPreview.
   const post = {
     title: (
       <Heading as="h1" sx={{ variant: 'styles.h1', mb: 3 }}>
@@ -33,11 +36,18 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
     // Add date object to post only if both date and datetime exist.
     date: date && datetime ? { formatted: date, datetime } : undefined,
   };
+
+  // Create values for Tags.
   const { basePath, tagCollection } = pageContext.themeOptions;
   const values = tags.map((tag) => ({
     tag,
     path: createPath(basePath, tagCollection, tag),
   }));
+
+  // Create images for MDXRenderer.
+  const constrainedImages = images
+    ? images.map((image) => image.childImageSharp.gatsbyImageData)
+    : undefined;
   return (
     <Layout location={location}>
       <SEO
@@ -49,7 +59,7 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
       <Container variant="narrow">
         <PostPreview post={post} mb={3} />
         <Tags values={values} mb={3} />
-        <MDXRenderer>{body}</MDXRenderer>
+        <MDXRenderer images={constrainedImages}>{body}</MDXRenderer>
       </Container>
     </Layout>
   );

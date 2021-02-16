@@ -7,7 +7,12 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../../components/layout';
 
 const ShadowedPage = ({ data, location }) => {
-  const { title, description, canonicalUrl, body } = data.page;
+  const { title, description, images, canonicalUrl, body } = data.page;
+
+  // Create images for MDXRenderer.
+  const constrainedImages = images
+    ? images.map((image) => image.childImageSharp.gatsbyImageData)
+    : undefined;
   return (
     <Layout location={location}>
       <SEO
@@ -18,7 +23,7 @@ const ShadowedPage = ({ data, location }) => {
       />
       <Container variant="narrow">
         <Themed.h1>{title}</Themed.h1>
-        <MDXRenderer>{body}</MDXRenderer>
+        <MDXRenderer images={constrainedImages}>{body}</MDXRenderer>
       </Container>
     </Layout>
   );
