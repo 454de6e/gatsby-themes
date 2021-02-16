@@ -1,5 +1,18 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.7.0
+
+### Minor Changes
+
+- 8340abe: Add support for images in MDX files for posts and pages
+
+### Patch Changes
+
+- Updated dependencies [8340abe]
+- Updated dependencies [8340abe]
+  - @maiertech/gatsby-theme-posts-core@0.8.0
+  - @maiertech/gatsby-theme-pages-core@0.5.0
+
 ## 0.6.0
 
 ### Minor Changes
