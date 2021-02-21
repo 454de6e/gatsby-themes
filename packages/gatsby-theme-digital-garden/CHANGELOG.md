@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.8.0
+
+### Minor Changes
+
+- a6ffd00: Add PostFooter with CTA
+
 ## 0.7.0
 
 ### Minor Changes
