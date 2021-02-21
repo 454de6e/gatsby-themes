@@ -10,7 +10,7 @@ module.exports = {
       { href: '/notes/', text: 'Notes' },
       { href: '/about/', text: 'About' },
     ],
-    siteTwitter: '454de6e',
+    siteTwitter: 'maiertech',
     siteUrl: 'https://digital-garden.themes.maier.tech',
   },
   plugins: ['@maiertech/gatsby-theme-digital-garden'],
