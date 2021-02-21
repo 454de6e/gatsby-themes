@@ -1,6 +1,6 @@
 import React from 'react';
 import { object } from 'prop-types';
-import { SEO } from '@maiertech/gatsby-theme-base';
+import { SEO, useSiteMetadata } from '@maiertech/gatsby-theme-base';
 import {
   Container,
   Heading,
@@ -11,6 +11,7 @@ import { createPath } from '@maiertech/gatsby-helpers';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../../../components/layout';
+import PostFooter from '../../../components/post-footer';
 
 const ShadowedPostPage = ({ data, location, pageContext }) => {
   const {
@@ -48,6 +49,10 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
   const constrainedImages = images
     ? images.map((image) => image.childImageSharp.gatsbyImageData)
     : undefined;
+
+  // Read Twitter username from site metadata.
+  const { siteTwitter: twitterUsername } = useSiteMetadata();
+
   return (
     <Layout location={location}>
       <SEO
@@ -60,6 +65,7 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
         <PostPreview post={post} mb={3} />
         <Tags values={values} mb={3} />
         <MDXRenderer images={constrainedImages}>{body}</MDXRenderer>
+        <PostFooter twitterUsername={twitterUsername} mt={4} />
       </Container>
     </Layout>
   );
