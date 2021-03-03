@@ -7,6 +7,7 @@ const slugify = require('@sindresorhus/slugify');
 module.exports.slugify = slugify;
 
 // Helper to create path from segments and add leading and trailing /.
+// This function uses the Node API!
 const createPath = (...segments) => {
   const path = join(...segments);
   // Add leading and trailing / if there are none.
@@ -19,10 +20,12 @@ module.exports.createPath = createPath;
 // Helper to assemble a URL from a base and a path.
 // Base can be with or without trailing /.
 // Created URL always ends with trailing /.
+// This function will run in browser during dev.
 module.exports.createUrl = (base, path) =>
   `${base.replace(/\/$/, '')}${createPath(path)}`;
 
 // Helper to ensure that a path exists.
+// This function uses the Node API!
 /* istanbul ignore next */
 module.exports.ensurePathExists = (path, reporter) => {
   if (existsSync(path)) {
