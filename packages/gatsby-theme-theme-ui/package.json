@@ -22,7 +22,7 @@
     "purge": "rm -rf ./node_modules"
   },
   "peerDependencies": {
-    "gatsby": "^2.26.1",
+    "gatsby": "^3.0.0",
     "react": "^16.14.0 || ^17.0.1",
     "react-dom": "^16.14.0 || ^17.0.1"
   },
@@ -30,10 +30,10 @@
     "@emotion/react": "^11.1.4",
     "@maiertech/components": "^0.23.1",
     "@maiertech/preset": "^0.5.1",
-    "@theme-ui/prism": "^0.6.0-alpha.6",
-    "gatsby-plugin-catch-links": "^2.10.0",
-    "gatsby-plugin-theme-ui": "^0.6.0-alpha.6",
+    "@theme-ui/prism": "^0.6.0-alpha.7",
+    "gatsby-plugin-catch-links": "^3.0.0",
+    "gatsby-plugin-theme-ui": "^0.6.0-alpha.7",
     "prop-types": "^15.7.2",
-    "theme-ui": "^0.6.0-alpha.6"
+    "theme-ui": "^0.6.0-alpha.7"
   }
 }

@@ -7,14 +7,18 @@ const {
 
 const withDefaults = require('./theme-options');
 
-// This Webpack config helps prevent this error: https://github.com/gatsbyjs/gatsby/issues/24815.
-// It is caused when using @maiertech/gatsby-helpers inside use-posts.js.
-// See https://www.gatsbyjs.com/docs/troubleshooting-common-errors/#issues-with-fs-resolution.
+// createPath and ensurePathExists from @maiertech/gatsby-helpers use fs and path from the Node API.
+// They cannot be run in the browser without a polyfill.
+// In digital-garden-example shadowed post-page.js uses createPath from the gatsby-helpers, which triggers a Webpack error in development.
+// Therefore, we need to load a polyfill.
 /* istanbul ignore next */
 module.exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
-    node: {
-      fs: 'empty',
+    resolve: {
+      alias: {
+        path: require.resolve('path-browserify'),
+      },
+      fallback: { fs: false },
     },
   });
 };
@@ -28,7 +32,7 @@ module.exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 /* istanbul ignore next */
 module.exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
-    interface Post @nodeInterface {
+    interface Post implements Node {
       id: ID!
       collection: String!
       title: String!

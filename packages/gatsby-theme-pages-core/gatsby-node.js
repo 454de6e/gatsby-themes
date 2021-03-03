@@ -16,7 +16,7 @@ module.exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 /* istanbul ignore next */
 module.exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
-      interface Page @nodeInterface {
+      interface Page implements Node {
         id: ID!
         title: String!
         description: String!
