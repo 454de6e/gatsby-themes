@@ -1,7 +1,7 @@
 {
   "name": "@maiertech/gatsby-theme-base",
   "description": "An opinionated theme to jump start a Gatsby site.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Thilo Maier <git@maier.asia>",
   "license": "MIT",
   "main": "index.js",

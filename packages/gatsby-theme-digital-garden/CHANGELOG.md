@@ -1,5 +1,20 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.9.0
+
+### Minor Changes
+
+- d8345a6: Upgrade to Gatsby v3
+
+### Patch Changes
+
+- Updated dependencies [d8345a6]
+  - @maiertech/gatsby-theme-base@0.6.0
+  - @maiertech/gatsby-theme-pages-core@0.6.0
+  - @maiertech/gatsby-theme-posts-core@0.9.0
+  - @maiertech/gatsby-theme-tags-core@0.6.0
+  - @maiertech/gatsby-theme-theme-ui@0.4.0
+
 ## 0.8.0
 
 ### Minor Changes

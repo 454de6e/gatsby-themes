@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-tags-core
 
+## 0.6.0
+
+### Minor Changes
+
+- d8345a6: Upgrade to Gatsby v3
+
 ## 0.5.1
 
 ### Patch Changes

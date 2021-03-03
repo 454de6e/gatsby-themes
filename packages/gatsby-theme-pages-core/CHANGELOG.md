@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-pages-core
 
+## 0.6.0
+
+### Minor Changes
+
+- d8345a6: Upgrade to Gatsby v3
+
 ## 0.5.0
 
 ### Minor Changes
