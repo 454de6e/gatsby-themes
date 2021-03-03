@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-theme-ui
 
+## 0.4.0
+
+### Minor Changes
+
+- d8345a6: Upgrade to Gatsby v3
+
 ## 0.3.1
 
 ### Patch Changes
