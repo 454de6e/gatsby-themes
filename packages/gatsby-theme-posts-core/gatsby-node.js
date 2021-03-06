@@ -93,7 +93,6 @@ module.exports.onCreateNode = (
     ...node.frontmatter,
     // Rename canonical_url to canonicalUrl
     canonicalUrl: node.frontmatter.canonical_url,
-    // eslint-disable-next-line babel/camelcase
     canonical_url: undefined,
     collection,
     path: createPath(
