@@ -1,7 +1,8 @@
 const micromatch = require('micromatch');
 const prettier = require('prettier');
 
-// Figure out all extensions supported by Prettier.
+// https://coding.maier.tech/posts/optimizing-lint-staged-config-js-for-prettier/
+
 const prettierSupportedExtensions = prettier
   .getSupportInfo()
   .languages.map(({ extensions }) => extensions)
@@ -10,19 +11,15 @@ const prettierSupportedExtensions = prettier
 const addQuotes = (a) => `"${a}"`;
 
 module.exports = (allStagedFiles) => {
-  // Match files for ESLint including dirs and files starting with dot.
-  const eslintFiles = micromatch(allStagedFiles, ['**/*.js'], { dot: true });
-  // Match for Prettier including dirs and files starting with dot.
+  const eslintFiles = micromatch(allStagedFiles, ['**/*.{js,jsx,ts,tsx}'], {
+    dot: true,
+  });
   const prettierFiles = micromatch(
     allStagedFiles,
     prettierSupportedExtensions.map((extension) => `**/*${extension}`),
     { dot: true }
   );
-
-  // Array of linters to be run in this sequence.
   const linters = [];
-  // Only add linters when there are staged files for them.
-  // `prettier --write` makes lint-staged never terminate if prettierFiles is empty.
   if (eslintFiles.length > 0)
     linters.push(`eslint --fix ${eslintFiles.join(' ')}`);
   if (prettierFiles.length > 0)

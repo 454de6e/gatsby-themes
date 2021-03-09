@@ -2169,10 +2169,10 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@maiertech/components@^0.23.1":
-  version "0.23.1"
-  resolved "https://registry.yarnpkg.com/@maiertech/components/-/components-0.23.1.tgz#a0c808b2583a7d3af8ce9bf32ec791ec3841e751"
-  integrity sha512-kwiPMa297d7BunoonhW1y+iIvmgif1TP24BOKm1KCCoWfqaew8iQ4G1f7PsOR/CzCuXH24kZVXb4p+LhfFdJWw==
+"@maiertech/components@^0.24.0":
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/@maiertech/components/-/components-0.24.0.tgz#4b53724154df1c061ff75c6b843bee89a69893e4"
+  integrity sha512-RfYgf6ofk5Ka9U/Fc661UnfZTPEjJlWPDywixwFzvFAaiDtePEbf2rvSUbhkdKmU3m+Trrfy7DrYl5VSemTNkw==
   dependencies:
     prop-types "^15.7.2"
 
@@ -2193,12 +2193,12 @@
     eslint-plugin-react-hooks "^4.2.0"
     eslint-plugin-testing-library "^3.10.1"
 
-"@maiertech/preset@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@maiertech/preset/-/preset-0.5.1.tgz#4a6a7d8d938dcd41ecf03a8c7a093cb786e02ec0"
-  integrity sha512-yQF1dHpTVpSbDi+0ev1AeMv+WlQAT4Lkqh/ggpam/oMYM8exbqlSQr+6Z/vZTYSHOOeFPWqVnFvB0RL4GrghVg==
+"@maiertech/preset@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@maiertech/preset/-/preset-0.5.2.tgz#a396a9af737086c6b3e967c970dab32b11d7b48b"
+  integrity sha512-dCMNgist2wtrDhikqjHxGDwyfSw7/1Odh1jPaj3HrjOkgYrjc/bz4OytRKHqHgVKSL+oXY6HPDZrqMWV9M3gzw==
   dependencies:
-    "@theme-ui/preset-base" "^0.5.0-alpha.1"
+    "@theme-ui/preset-base" "^0.6.0-alpha.7"
 
 "@maiertech/prettier-config@^0.3.0":
   version "0.3.0"
@@ -2547,10 +2547,10 @@
     "@emotion/react" "^11.1.1"
     "@theme-ui/css" "0.6.0-alpha.7"
 
-"@theme-ui/preset-base@^0.5.0-alpha.1":
-  version "0.5.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@theme-ui/preset-base/-/preset-base-0.5.0-alpha.1.tgz#8d29bc348d947f43abe7e526a6a12393f9ea7786"
-  integrity sha512-rXWBpjn6x0uFSdDo3/OdxEPS1Cs+kVxXamNdZOAxZe3oOSaYJdIlDyiP/U701lIQf+yczw6I//IT/gN458EeCQ==
+"@theme-ui/preset-base@^0.6.0-alpha.7":
+  version "0.6.0-canary.c5a716a.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/preset-base/-/preset-base-0.6.0-canary.c5a716a.0.tgz#45b87de1c8c2ba6d2e6098d7be215a1be740d5dc"
+  integrity sha512-Rn3WUJvCpjsBIZQ95jZr7CDf9l2e2rXiCKmBf3UABDvph0zNhzXASSfG6//kINp9jPciZuzmhEyetUw9NraWLw==
 
 "@theme-ui/prism@^0.6.0-alpha.7":
   version "0.6.0-alpha.7"
