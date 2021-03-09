@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-base
 
+## 0.7.0
+
+### Minor Changes
+
+- c7e4e95: Use siteTitle for header and seoTitle for SEO
+
 ## 0.6.0
 
 ### Minor Changes
