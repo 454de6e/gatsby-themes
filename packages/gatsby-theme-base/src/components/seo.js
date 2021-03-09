@@ -14,11 +14,15 @@ const SEO = ({
   canonicalUrl,
   children,
 }) => {
-  const { siteTitle, siteUrl, siteTwitter } = useSiteMetadata();
+  const { seoTitle, siteUrl, siteTwitter } = useSiteMetadata();
   const language = lang || 'en';
   const url = canonicalUrl ? canonicalUrl : createUrl(siteUrl, path);
   return (
-    <Helmet title={title} titleTemplate={`%s | ${siteTitle}`}>
+    <Helmet
+      title={title}
+      titleTemplate={`%s | ${seoTitle}`}
+      defaultTitle={seoTitle}
+    >
       <html lang={language} />
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords.join(', ')} />}
@@ -37,7 +41,7 @@ const SEO = ({
 };
 
 SEO.propTypes = {
-  title: string.isRequired,
+  title: string,
   description: string.isRequired,
   keywords: arrayOf(string),
   lang: string,
