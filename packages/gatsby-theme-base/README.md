@@ -9,7 +9,8 @@ your site's `gatsby-config.js`:
 
 | Key             | Required | Description                                                              |
 | :-------------- | :------- | :----------------------------------------------------------------------- |
-| siteTitle       | ✓        | Site title for SEO.                                                      |
+| siteTitle       | ✓        | Site title displayed in header.                                          |
+| seoTitle        | ✓        | SEO title used for title template and as default title.                  |
 | siteDescription |          | Optional site description for SEO of the homepage.                       |
 | siteUrl         | ✓        | URL from which the production site is served. Used for sitemap creation. |
 | siteTwitter     | ✓        | Site Twitter username for SEO.                                           |

@@ -41,11 +41,8 @@ const Homepage = ({ data, location }) => {
   );
   return (
     <Layout location={location}>
-      <SEO
-        title="Homepage"
-        description={siteDescription}
-        path={location.pathname}
-      />
+      {/* Omit title to trigger default title without title template for homepage. */}
+      <SEO description={siteDescription} path={location.pathname} />
       <Container variant="narrow">
         <Grid gap={4} columns={1}>
           {posts.map(({ id, path, ...post }) => (
