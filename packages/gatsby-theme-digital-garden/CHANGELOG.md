@@ -1,5 +1,18 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.10.0
+
+### Minor Changes
+
+- c7e4e95: Use siteTitle for header and seoTitle for SEO
+
+### Patch Changes
+
+- Updated dependencies [a5646f8]
+- Updated dependencies [c7e4e95]
+  - @maiertech/gatsby-theme-theme-ui@0.5.0
+  - @maiertech/gatsby-theme-base@0.7.0
+
 ## 0.9.0
 
 ### Minor Changes

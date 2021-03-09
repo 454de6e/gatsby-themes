@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-theme-ui
 
+## 0.5.0
+
+### Minor Changes
+
+- a5646f8: Remove DEV from footer
+
 ## 0.4.0
 
 ### Minor Changes
