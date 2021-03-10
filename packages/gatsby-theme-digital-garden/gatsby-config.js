@@ -12,8 +12,9 @@ module.exports = (themeOptions) => {
           contentPath: 'content/posts',
           fullRelativePath: false,
           mdxOtherwiseConfigured: true,
-          // This option has no effect other than that it is passed through to page templates.
+          // The following options have no effect other than that they are passed through to page templates.
           tagCollection: 'tags',
+          type: 'post',
         },
       },
       {
@@ -24,8 +25,9 @@ module.exports = (themeOptions) => {
           contentPath: 'content/chunks',
           fullRelativePath: false,
           mdxOtherwiseConfigured: true,
-          // This option has no effect other than that it is passed through to page templates.
+          // The following options have no effect other than that they are passed through to page templates.
           tagCollection: 'tags',
+          type: 'chunk',
         },
       },
       {
@@ -36,6 +38,7 @@ module.exports = (themeOptions) => {
           contentPath: 'content/notes',
           fullRelativePath: true,
           mdxOtherwiseConfigured: true,
+          // The following options have no effect other than that they are passed through to page templates.
           tagCollection: 'notes',
         },
       },
