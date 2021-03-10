@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.11.0
+
+### Minor Changes
+
+- ddae9fc: Customize PostFooter behavior
+
 ## 0.10.0
 
 ### Minor Changes
