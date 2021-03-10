@@ -26,6 +26,8 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
     body,
   } = data.post;
 
+  const { basePath, tagCollection, type } = pageContext.themeOptions;
+
   // Create post for PostPreview.
   const post = {
     title: (
@@ -39,7 +41,6 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
   };
 
   // Create values for Tags.
-  const { basePath, tagCollection } = pageContext.themeOptions;
   const values = tags.map((tag) => ({
     tag,
     path: createPath(basePath, tagCollection, tag),
@@ -65,7 +66,10 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
         <PostPreview post={post} mb={3} />
         <Tags values={values} mb={3} />
         <MDXRenderer images={constrainedImages}>{body}</MDXRenderer>
-        <PostFooter twitterUsername={twitterUsername} mt={4} />
+        {/* Display PageFooter only when type has been set in theme options. */}
+        {type && (
+          <PostFooter type={type} twitterUsername={twitterUsername} mt={4} />
+        )}
       </Container>
     </Layout>
   );

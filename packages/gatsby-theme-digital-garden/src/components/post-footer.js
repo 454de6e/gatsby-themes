@@ -8,12 +8,11 @@ import {
   TwitterIcon,
 } from '@maiertech/gatsby-theme-theme-ui';
 
-const PostFooter = ({ twitterUsername, ...props }) => (
+const PostFooter = ({ type, twitterUsername, onclick, ...props }) => (
   <Flex {...props} sx={{ flexDirection: 'column', alignItems: 'flex-start' }}>
-    <Themed.h2>Did you like this post?</Themed.h2>
+    <Themed.h2>{`Did you like this ${type}?`}</Themed.h2>
     <Themed.p>
-      My goal is to create helpful content for web developers in my digital
-      garden. Follow me on Twitter for regular updates about new posts.
+      {`Follow me on Twitter for regular updates about new ${type}s.`}
     </Themed.p>
     <Button as="a" href={`https://twitter.com/${twitterUsername}`}>
       <Flex sx={{ alignItems: 'center' }}>
@@ -25,7 +24,9 @@ const PostFooter = ({ twitterUsername, ...props }) => (
 );
 
 PostFooter.propTypes = {
+  type: string.isRequired,
   twitterUsername: string.isRequired,
+  onclick: string,
 };
 
 export default PostFooter;
