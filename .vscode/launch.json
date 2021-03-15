@@ -2,18 +2,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "core-themes-example",
-      "type": "pwa-node",
+      "name": "garden-example: chrome",
       "request": "launch",
-      "program": "${workspaceFolder}/examples/core-themes/node_modules/.bin/gatsby",
-      "cwd": "${workspaceFolder}/examples/core-themes",
-      "args": ["develop"],
-      "runtimeArgs": ["--nolazy"],
-      "console": "integratedTerminal"
+      "type": "pwa-chrome",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceFolder}/examples/digital-garden"
     },
     {
-      "name": "digital-garden-example",
-      "type": "pwa-node",
+      "name": "garden-example: node",
+      "type": "node",
       "request": "launch",
       "program": "${workspaceFolder}/examples/digital-garden/node_modules/.bin/gatsby",
       "cwd": "${workspaceFolder}/examples/digital-garden",
@@ -22,11 +19,13 @@
       "console": "integratedTerminal"
     },
     {
-      "name": "lint-staged",
-      "type": "pwa-node",
+      "name": "core-themes-example",
+      "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/node_modules/.bin/lint-staged",
-      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/examples/core-themes/node_modules/.bin/gatsby",
+      "cwd": "${workspaceFolder}/examples/core-themes",
+      "args": ["develop"],
+      "runtimeArgs": ["--nolazy"],
       "console": "integratedTerminal"
     },
     {

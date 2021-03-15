@@ -12,9 +12,12 @@ module.exports = (themeOptions) => {
           contentPath: 'content/posts',
           fullRelativePath: false,
           mdxOtherwiseConfigured: true,
-          // The following options have no effect other than that they are passed through to page templates.
+          // The following options have no effect other than that they are passed through to the page template.
           tagCollection: 'tags',
           type: 'post',
+          tracking: () => {
+            console.log('Goal tracked for posts!');
+          },
         },
       },
       {
@@ -25,9 +28,10 @@ module.exports = (themeOptions) => {
           contentPath: 'content/chunks',
           fullRelativePath: false,
           mdxOtherwiseConfigured: true,
-          // The following options have no effect other than that they are passed through to page templates.
+          // The following options have no effect other than that they are passed through to the page template.
           tagCollection: 'tags',
           type: 'chunk',
+          tracking: 'Goal tracked for chunks!',
         },
       },
       {
@@ -38,7 +42,7 @@ module.exports = (themeOptions) => {
           contentPath: 'content/notes',
           fullRelativePath: true,
           mdxOtherwiseConfigured: true,
-          // The following options have no effect other than that they are passed through to page templates.
+          // The following options have no effect other than that they are passed through to the page template.
           tagCollection: 'notes',
         },
       },

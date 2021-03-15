@@ -26,7 +26,7 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
     body,
   } = data.post;
 
-  const { basePath, tagCollection, type } = pageContext.themeOptions;
+  const { basePath, tagCollection, type, tracking } = pageContext.themeOptions;
 
   // Create post for PostPreview.
   const post = {
@@ -68,7 +68,12 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
         <MDXRenderer images={constrainedImages}>{body}</MDXRenderer>
         {/* Display PageFooter only when type has been set in theme options. */}
         {type && (
-          <PostFooter type={type} twitterUsername={twitterUsername} mt={4} />
+          <PostFooter
+            type={type}
+            twitterUsername={twitterUsername}
+            tracking={tracking}
+            mt={4}
+          />
         )}
       </Container>
     </Layout>
