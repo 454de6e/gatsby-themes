@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-theme-ui
 
+## 0.5.1
+
+### Patch Changes
+
+- 10ea678: Upgrade dependencies
+
 ## 0.5.0
 
 ### Minor Changes

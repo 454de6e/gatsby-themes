@@ -1,7 +1,7 @@
 {
   "name": "@maiertech/gatsby-theme-theme-ui",
   "description": "Add opinionated Theme UI styling to a Gatsby site.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": "Thilo Maier <git@maier.asia>",
   "license": "MIT",
   "main": "index.js",

@@ -1,5 +1,12 @@
 # @maiertech/gatsby-theme-tags-core
 
+## 0.6.1
+
+### Patch Changes
+
+- Updated dependencies [10ea678]
+  - @maiertech/gatsby-helpers@0.4.0
+
 ## 0.6.0
 
 ### Minor Changes
