@@ -41,7 +41,7 @@ describe('createPages', () => {
     // About page.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/about/',
-      component: require.resolve('../src/template.js'),
+      component: require.resolve('../src/templates/page.js'),
       context: {
         id: '1',
         themeOptions: {
@@ -56,7 +56,7 @@ describe('createPages', () => {
     // Privacy policy page.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/privacy-policy/',
-      component: require.resolve('../src/template.js'),
+      component: require.resolve('../src/templates/page.js'),
       context: {
         id: '2',
         themeOptions: {
@@ -71,7 +71,7 @@ describe('createPages', () => {
     // Terms page.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/terms/',
-      component: require.resolve('../src/template.js'),
+      component: require.resolve('../src/templates/page.js'),
       context: {
         id: '3',
         themeOptions: {

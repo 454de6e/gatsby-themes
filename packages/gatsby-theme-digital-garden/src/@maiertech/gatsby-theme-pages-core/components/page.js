@@ -4,7 +4,7 @@ import { Container, Themed } from '@maiertech/gatsby-theme-theme-ui';
 import { SEO } from '@maiertech/gatsby-theme-base';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Layout from '../../components/layout';
+import Layout from '../../../components/layout';
 
 const ShadowedPage = ({ data, location }) => {
   const { title, description, images, canonicalUrl, body } = data.page;

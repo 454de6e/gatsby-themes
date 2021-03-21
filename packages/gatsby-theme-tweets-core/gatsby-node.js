@@ -1,7 +1,7 @@
 const {
   createPath,
   ensurePathExists,
-  mdxResolverPassthrough,
+  filter,
   slugify,
 } = require('@maiertech/gatsby-helpers');
 
@@ -9,7 +9,7 @@ const withDefaults = require('./theme-options');
 
 // createPath and ensurePathExists from @maiertech/gatsby-helpers use fs and path from the Node API.
 // They cannot be run in the browser without a polyfill.
-// In digital-garden-example shadowed post-page.js uses createPath from the gatsby-helpers, which triggers a Webpack error in development.
+// digital-garden-example shadows tweet-page.js and uses createPath from gatsby-helpers, which triggers a Webpack error in development.
 // Therefore, we need to load a polyfill.
 /* istanbul ignore next */
 module.exports.onCreateWebpackConfig = ({ actions }) => {
@@ -32,48 +32,43 @@ module.exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 /* istanbul ignore next */
 module.exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
-    interface Post implements Node {
+    interface Tweet implements Node {
       id: ID!
       collection: String!
       title: String!
-      author: String
-      date: Date @dateformat
+      user: String
       description: String!
+      url: String!
+      thread: String
       tags: [String!]
-      images: [File!]
-      body: String!
+      image: File
+      imageTitle: String
+      imageAlt: String
       path: String!
-      canonicalUrl: String
     }
 
-    type MdxPost implements Node & Post {
+    type MdxTweet implements Node & Tweet {
       id: ID!
       collection: String!
       title: String!
-      author: String
-      date: Date @dateformat
+      user: String
       description: String!
+      url: String!
+      thread: String
       tags: [String!]
-      images: [File!] @fileByRelativePath
-      body: String!
+      image: File @fileByRelativePath
+      imageTitle: String
+      imageAlt: String
       path: String!
-      canonicalUrl: String
     }
   `);
 };
 
-/* istanbul ignore next */
-module.exports.createResolvers = ({ createResolvers }) => {
-  createResolvers({
-    MdxPost: { body: { resolve: mdxResolverPassthrough('body') } },
-  });
-};
-
 module.exports.onCreateNode = (
-  { actions, node, getNode, createNodeId, createContentDigest },
+  { actions, node, getNode, createContentDigest },
   themeOptions
 ) => {
-  const { basePath, collection, fullRelativePath } = withDefaults(themeOptions);
+  const { collection, fullRelativePath } = withDefaults(themeOptions);
 
   // Process MDX nodes only.
   if (node.internal.type !== 'Mdx') {
@@ -91,25 +86,21 @@ module.exports.onCreateNode = (
 
   const nodeData = {
     ...node.frontmatter,
-    // Rename canonical_url to canonicalUrl
-    canonicalUrl: node.frontmatter.canonical_url,
-    canonical_url: undefined,
     collection,
     path: createPath(
-      basePath,
       collection,
       // Decide whether or not to omit relativeDirectory in path.
       fullRelativePath ? relativeDirectory : '',
       node.frontmatter.slug || slugify(node.frontmatter.title)
     ),
-    // slug in frontmatter is not needed in MdxPost.
+    // slug from frontmatter is not needed in MdxTweet.
     slug: undefined,
   };
 
-  const nodeType = 'MdxPost';
+  const nodeType = 'MdxTweet';
 
   actions.createNode({
-    id: createNodeId(`${nodeType}-${collection}-${node.id}`),
+    // ID is spread in from nodeData.
     parent: node.id,
     ...nodeData,
     internal: {
@@ -133,28 +124,31 @@ module.exports.onCreateNode = (
   });
 };
 
-// This Node API method cannot be replaced with File System Route API since we need to add the following info to context:
-// - prev and next for navigation between tweets.
+// This Node API method cannot be replaced with the File System Route API since we need to add the following info to context:
+// - prev and next for navigation between tweets and
+// - grouping thread for intra thread navigation.
 module.exports.createPages = async (
-  { actions, graphql, reporter },
+  { actions, graphql, pathPrefix, reporter },
   themeOptions
 ) => {
   const { createPage } = actions;
   const options = withDefaults(themeOptions);
-  const { basePath, collection } = options;
+  const { collection } = options;
 
-  // Query all posts that belong to the same collection.
-  // Sort order matters to determine next and previous posts.
+  // Query all tweets that belong to the same collection.
+  // Sort order matters to determine next and prev tweets.
+  // Since fragments are not supported in gatsby-node.js, we cannot use TweetFragment here.
   const result = await graphql(
     `
       query($collection: String!) {
-        allPost(
-          sort: { fields: date, order: DESC }
+        allTweet(
+          sort: { fields: id, order: DESC }
           filter: { collection: { eq: $collection } }
         ) {
           nodes {
             id
             title
+            thread
             path
           }
         }
@@ -164,31 +158,41 @@ module.exports.createPages = async (
   );
 
   if (result.errors) {
-    reporter.error('There was an error fetching posts.', result.errors);
+    reporter.error('There was an error fetching tweets.', result.errors);
     return;
   }
 
-  const posts = result.data.allPost.nodes;
+  const tweets = result.data.allTweet.nodes;
 
-  // Create posts page.
+  // Create tweets page.
   createPage({
-    path: createPath(basePath, collection),
-    component: require.resolve('./src/templates/posts.js'),
+    path: createPath(pathPrefix, collection),
+    component: require.resolve('./src/templates/tweets.js'),
     context: {
+      // collection is required for GraphQL query.
       collection,
+      // theme options are required in shadowed page components.
       themeOptions: options,
     },
   });
 
-  // Create post pages
-  posts.forEach((node, index) => {
+  // Create tweet pages.
+  tweets.forEach((tweet, i) => {
+    // Determine tweets that are part of the same thread.
+    let thread;
+    if (tweet.thread) {
+      thread = filter(tweets, { thread: tweet.thread }).reverse();
+    }
     actions.createPage({
-      path: node.path,
-      component: require.resolve('./src/templates/post.js'),
+      path: tweet.path,
+      component: require.resolve('./src/templates/tweet.js'),
       context: {
-        id: node.id,
-        prev: posts[index - 1],
-        next: posts[index + 1],
+        id: tweet.id,
+        thread,
+        prev: tweets[i - 1],
+        next: tweets[i + 1],
+        // Make pathPrefix available so shadowed templates can link to tag pages.
+        pathPrefix,
         themeOptions: options,
       },
     });

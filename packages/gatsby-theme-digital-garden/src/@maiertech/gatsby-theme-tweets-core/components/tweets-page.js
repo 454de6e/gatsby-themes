@@ -7,30 +7,12 @@ import {
   Grid,
   Heading,
   Link,
-  PostPreview,
 } from '@maiertech/gatsby-theme-theme-ui';
 
 import Layout from '../../../components/layout';
 
-const ShadowedPostsPage = ({ data, location, pageContext }) => {
-  const posts = data.allPost.nodes.map(
-    ({ id, title, date, datetime, path }) => ({
-      id,
-      title: (
-        <Heading
-          as="h2"
-          sx={{
-            variant: 'styles.h2',
-            mb: 2,
-          }}
-        >
-          {title}
-        </Heading>
-      ),
-      date: { formatted: date, datetime },
-      path,
-    })
-  );
+const ShadowedTweetsPage = ({ data, location, pageContext }) => {
+  debugger;
   return (
     <Layout location={location}>
       <SEO
@@ -47,7 +29,7 @@ const ShadowedPostsPage = ({ data, location, pageContext }) => {
           {pageContext.collection}
         </Heading>
         <Grid gap={4} columns={1}>
-          {posts.map(({ id, path, ...post }) => (
+          {data.allTweet.nodes.map(({ id, path, ...tweet }) => (
             <Link
               key={id}
               href={path}
@@ -61,7 +43,16 @@ const ShadowedPostsPage = ({ data, location, pageContext }) => {
                 },
               }}
             >
-              <PostPreview post={{ ...post }} mb={2} />
+              <Heading
+                as="h2"
+                sx={{
+                  variant: 'styles.h2',
+                  mb: 2,
+                }}
+              >
+                {tweet.title}
+              </Heading>
+
               <Button as="div" sx={{ fontWeight: 'bold' }}>
                 Read →
               </Button>
@@ -73,10 +64,10 @@ const ShadowedPostsPage = ({ data, location, pageContext }) => {
   );
 };
 
-ShadowedPostsPage.propTypes = {
+ShadowedTweetsPage.propTypes = {
   data: object.isRequired,
   location: object.isRequired,
   pageContext: object.isRequired,
 };
 
-export default ShadowedPostsPage;
+export default ShadowedTweetsPage;

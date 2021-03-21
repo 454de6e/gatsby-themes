@@ -56,7 +56,3 @@
 ### Minor Changes
 
 - 907f3d4: Initial release
-
-### Patch Changes
-
-- 0cfda85: Add location and pageContext to pages

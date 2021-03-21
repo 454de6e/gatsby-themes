@@ -23,9 +23,21 @@ describe('createPages', () => {
         data: {
           allPost: {
             nodes: [
-              { id: '3', path: '/posts/third-post/' },
-              { id: '2', path: '/posts/second-post/' },
-              { id: '1', path: '/posts/first-post/' },
+              {
+                id: '3',
+                title: 'Title of third post',
+                path: '/posts/third-post/',
+              },
+              {
+                id: '2',
+                title: 'Title of second post',
+                path: '/posts/second-post/',
+              },
+              {
+                id: '1',
+                title: 'Title of first post',
+                path: '/posts/first-post/',
+              },
             ],
           },
         },
@@ -41,7 +53,7 @@ describe('createPages', () => {
     // Posts page.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/posts/',
-      component: require.resolve('../src/templates/posts-query.js'),
+      component: require.resolve('../src/templates/posts.js'),
       context: {
         collection: 'posts',
         themeOptions: {
@@ -57,11 +69,15 @@ describe('createPages', () => {
     // First post.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/posts/first-post/',
-      component: require.resolve('../src/templates/post-query.js'),
+      component: require.resolve('../src/templates/post.js'),
       context: {
         id: '1',
-        prev: '2',
-        next: null,
+        prev: {
+          id: '2',
+          title: 'Title of second post',
+          path: '/posts/second-post/',
+        },
+        next: undefined,
         themeOptions: {
           basePath: '/',
           collection: 'posts',
@@ -75,11 +91,19 @@ describe('createPages', () => {
     // Second post.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/posts/second-post/',
-      component: require.resolve('../src/templates/post-query.js'),
+      component: require.resolve('../src/templates/post.js'),
       context: {
         id: '2',
-        prev: '3',
-        next: '1',
+        prev: {
+          id: '3',
+          title: 'Title of third post',
+          path: '/posts/third-post/',
+        },
+        next: {
+          id: '1',
+          title: 'Title of first post',
+          path: '/posts/first-post/',
+        },
         themeOptions: {
           basePath: '/',
           collection: 'posts',
@@ -93,11 +117,15 @@ describe('createPages', () => {
     // Third post.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/posts/third-post/',
-      component: require.resolve('../src/templates/post-query.js'),
+      component: require.resolve('../src/templates/post.js'),
       context: {
         id: '3',
-        prev: null,
-        next: '2',
+        prev: undefined,
+        next: {
+          id: '2',
+          title: 'Title of second post',
+          path: '/posts/second-post/',
+        },
         themeOptions: {
           basePath: '/',
           collection: 'posts',
@@ -117,9 +145,21 @@ describe('createPages', () => {
           data: {
             allPost: {
               nodes: [
-                { id: '3', path: '/custom/posts/third-post/' },
-                { id: '2', path: '/custom/posts/second-post/' },
-                { id: '1', path: '/custom/posts/first-post/' },
+                {
+                  id: '3',
+                  title: 'Title of third post',
+                  path: '/custom/posts/third-post/',
+                },
+                {
+                  id: '2',
+                  title: 'Title of second post',
+                  path: '/custom/posts/second-post/',
+                },
+                {
+                  id: '1',
+                  title: 'Title of first post',
+                  path: '/custom/posts/first-post/',
+                },
               ],
             },
           },
@@ -137,7 +177,7 @@ describe('createPages', () => {
     // Posts page.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/custom/posts/',
-      component: require.resolve('../src/templates/posts-query.js'),
+      component: require.resolve('../src/templates/posts.js'),
       context: {
         collection: 'posts',
         themeOptions: {
@@ -153,11 +193,15 @@ describe('createPages', () => {
     // First post.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/custom/posts/first-post/',
-      component: require.resolve('../src/templates/post-query.js'),
+      component: require.resolve('../src/templates/post.js'),
       context: {
         id: '1',
-        prev: '2',
-        next: null,
+        prev: {
+          id: '2',
+          title: 'Title of second post',
+          path: '/custom/posts/second-post/',
+        },
+        next: undefined,
         themeOptions: {
           basePath: '/custom',
           collection: 'posts',
@@ -171,11 +215,19 @@ describe('createPages', () => {
     // Second post.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/custom/posts/second-post/',
-      component: require.resolve('../src/templates/post-query.js'),
+      component: require.resolve('../src/templates/post.js'),
       context: {
         id: '2',
-        prev: '3',
-        next: '1',
+        prev: {
+          id: '3',
+          title: 'Title of third post',
+          path: '/custom/posts/third-post/',
+        },
+        next: {
+          id: '1',
+          title: 'Title of first post',
+          path: '/custom/posts/first-post/',
+        },
         themeOptions: {
           basePath: '/custom',
           collection: 'posts',
@@ -189,11 +241,15 @@ describe('createPages', () => {
     // Third post.
     expect(actions.createPage).toHaveBeenCalledWith({
       path: '/custom/posts/third-post/',
-      component: require.resolve('../src/templates/post-query.js'),
+      component: require.resolve('../src/templates/post.js'),
       context: {
         id: '3',
-        prev: null,
-        next: '2',
+        prev: undefined,
+        next: {
+          id: '2',
+          title: 'Title of second post',
+          path: '/custom/posts/second-post/',
+        },
         themeOptions: {
           basePath: '/custom',
           collection: 'posts',
