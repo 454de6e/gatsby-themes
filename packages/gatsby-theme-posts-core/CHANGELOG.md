@@ -1,5 +1,17 @@
 # @maiertech/gatsby-theme-posts-core
 
+## 0.10.0
+
+### Minor Changes
+
+- 10ea678: Update logic to determine prev and next posts
+- 10ea678: Follow naming convention for templates
+
+### Patch Changes
+
+- Updated dependencies [10ea678]
+  - @maiertech/gatsby-helpers@0.4.0
+
 ## 0.9.0
 
 ### Minor Changes

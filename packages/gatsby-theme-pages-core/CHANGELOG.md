@@ -1,5 +1,17 @@
 # @maiertech/gatsby-theme-pages-core
 
+## 0.7.0
+
+### Minor Changes
+
+- 10ea678: Use standard locations for template and page component
+
+### Patch Changes
+
+- 10ea678: Upgrade dependencies
+- Updated dependencies [10ea678]
+  - @maiertech/gatsby-helpers@0.4.0
+
 ## 0.6.0
 
 ### Minor Changes

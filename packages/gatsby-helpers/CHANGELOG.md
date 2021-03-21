@@ -1,5 +1,11 @@
 # @maiertech/gatsby-helpers
 
+## 0.4.0
+
+### Minor Changes
+
+- 10ea678: Re-export lodash.filter
+
 ## 0.3.0
 
 ### Minor Changes
