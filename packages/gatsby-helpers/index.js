@@ -4,7 +4,11 @@ const { join } = require('path');
 const _filter = require('lodash.filter');
 const slugify = require('@sindresorhus/slugify');
 
+// Re-export slugify.
 module.exports.slugify = slugify;
+
+// Re-export lodash.filter.
+module.exports.filter = _filter;
 
 // Helper to create path from segments and add leading and trailing /.
 // This function uses the Node API!

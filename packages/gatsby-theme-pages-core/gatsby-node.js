@@ -133,7 +133,7 @@ module.exports.createPages = async (
   pages.forEach(({ id, path }) => {
     actions.createPage({
       path,
-      component: require.resolve('./src/template.js'),
+      component: require.resolve('./src/templates/page.js'),
       context: {
         id,
         themeOptions: options,

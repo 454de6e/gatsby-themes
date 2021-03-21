@@ -10,7 +10,7 @@ export const query = graphql`
       sort: { fields: [date, title], order: [DESC, ASC] }
       filter: { collection: { eq: $collection } }
     ) {
-      posts: nodes {
+      nodes {
         ...PostFragment
       }
     }

@@ -1,14 +1,14 @@
 {
-  "name": "@maiertech/gatsby-theme-pages-core",
-  "description": "This theme adds a Page type to Gatsby sites.",
-  "version": "0.6.0",
+  "name": "@maiertech/gatsby-theme-tweets-core",
+  "description": "This theme adds a Tweet type to Gatsby sites.",
+  "version": "0.0.0",
   "author": "Thilo Maier <git@maier.asia>",
   "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/maiertech/gatsby-themes.git",
-    "directory": "packages/gatsby-theme-pages-core"
+    "directory": "packages/gatsby-theme-tweets-core"
   },
   "keywords": [
     "gatsby",
@@ -22,18 +22,17 @@
     "purge": "rm -rf ./node_modules"
   },
   "peerDependencies": {
-    "gatsby": "^3.0.0",
+    "gatsby": "^3.0.4",
     "react": "^16.14.0 || ^17.0.1",
     "react-dom": "^16.14.0 || ^17.0.1"
   },
   "dependencies": {
     "@maiertech/gatsby-helpers": "^0.3.0",
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
     "gatsby-plugin-mdx": "^2.1.0",
     "gatsby-plugin-sharp": "^3.1.1",
     "gatsby-source-filesystem": "^3.1.0",
     "gatsby-transformer-sharp": "^3.1.0",
+    "path-browserify": "^1.0.1",
     "prop-types": "^15.7.2"
   }
 }
