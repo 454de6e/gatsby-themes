@@ -1,5 +1,12 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.12.0
+
+### Minor Changes
+
+- 819fff2: Re-release with after adding proper semantic version to
+  @maiertech/gatsby-theme-tweets-core dependency
+
 ## 0.11.2
 
 ### Patch Changes
