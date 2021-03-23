@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-tweets-core
 
+## 0.2.1
+
+### Patch Changes
+
+- 1c94315: Make title in TweetImage optional
+
 ## 0.2.0
 
 ### Minor Changes
