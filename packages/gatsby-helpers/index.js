@@ -51,17 +51,25 @@ module.exports.filterNodes = (data, filter) => {
 };
 
 // Helper to resolve fields on Mdx nodes.
+// Lookup available resovers here:
+// https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-mdx/gatsby/source-nodes.js
+// Some resolvers require arguments to make sense, e.g. the resolver for excerpt.
 /* istanbul ignore next */
-module.exports.mdxResolverPassthrough = (fieldName) => {
+module.exports.mdxResolverPassthrough = (fieldName, defaultArgs) => {
   return async (source, args, context, info) => {
     const type = info.schema.getType(`Mdx`);
     const mdxNode = context.nodeModel.getNodeById({
       id: source.parent,
     });
     const resolver = type.getFields()[fieldName].resolve;
-    const value = await resolver(mdxNode, args, context, {
-      fieldName,
-    });
+    const value = await resolver(
+      mdxNode,
+      { ...defaultArgs, ...args },
+      context,
+      {
+        fieldName,
+      }
+    );
 
     return value.items ? value.items : value;
   };

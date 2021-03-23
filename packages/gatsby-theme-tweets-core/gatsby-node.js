@@ -2,6 +2,7 @@ const {
   createPath,
   ensurePathExists,
   filter,
+  mdxResolverPassthrough,
   slugify,
 } = require('@maiertech/gatsby-helpers');
 
@@ -12,7 +13,7 @@ const withDefaults = require('./theme-options');
 // digital-garden-example shadows tweet-page.js and uses createPath from gatsby-helpers, which triggers a Webpack error in development.
 // Therefore, we need to load a polyfill.
 /* istanbul ignore next */
-module.exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -24,14 +25,25 @@ module.exports.onCreateWebpackConfig = ({ actions }) => {
 };
 
 /* istanbul ignore next */
-module.exports.onPreBootstrap = ({ reporter }, themeOptions) => {
+exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   const { contentPath } = withDefaults(themeOptions);
   ensurePathExists(contentPath, reporter);
 };
 
 /* istanbul ignore next */
-module.exports.createSchemaCustomization = ({ actions }) => {
+exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
+    type TweetImage {
+      src: File! @fileByRelativePath
+      title: String!
+      alt: String!
+    }
+
+    type TweetResource {
+      title: String!
+      href: String!
+    }
+
     interface Tweet implements Node {
       id: ID!
       collection: String!
@@ -41,9 +53,9 @@ module.exports.createSchemaCustomization = ({ actions }) => {
       url: String!
       thread: String
       tags: [String!]
-      image: File
-      imageTitle: String
-      imageAlt: String
+      image: TweetImage
+      links: [TweetResource!]
+      body: String!
       path: String!
     }
 
@@ -56,15 +68,31 @@ module.exports.createSchemaCustomization = ({ actions }) => {
       url: String!
       thread: String
       tags: [String!]
-      image: File @fileByRelativePath
-      imageTitle: String
-      imageAlt: String
+      image: TweetImage
+      links: [TweetResource!]
+      body: String!
       path: String!
     }
   `);
 };
 
-module.exports.onCreateNode = (
+/* istanbul ignore next */
+exports.createResolvers = ({ createResolvers }, themeOptions) => {
+  const { pruneLength } = withDefaults(themeOptions);
+  createResolvers({
+    MdxTweet: {
+      body: { resolve: mdxResolverPassthrough('body') },
+      description: {
+        // Create resolver with default arg pruneLength from theme options.
+        resolve: mdxResolverPassthrough('excerpt', {
+          pruneLength,
+        }),
+      },
+    },
+  });
+};
+
+exports.onCreateNode = (
   { actions, node, getNode, createContentDigest },
   themeOptions
 ) => {
@@ -127,7 +155,7 @@ module.exports.onCreateNode = (
 // This Node API method cannot be replaced with the File System Route API since we need to add the following info to context:
 // - prev and next for navigation between tweets and
 // - grouping thread for intra thread navigation.
-module.exports.createPages = async (
+exports.createPages = async (
   { actions, graphql, pathPrefix, reporter },
   themeOptions
 ) => {

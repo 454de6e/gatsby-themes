@@ -64,6 +64,7 @@ describe('createPages', () => {
           contentPath: 'content/tweets',
           fullRelativePath: false,
           mdxOtherwiseConfigured: false,
+          pruneLength: 160,
         },
       },
     });
@@ -87,6 +88,7 @@ describe('createPages', () => {
           contentPath: 'content/tweets',
           fullRelativePath: false,
           mdxOtherwiseConfigured: false,
+          pruneLength: 160,
         },
       },
     });
@@ -128,6 +130,7 @@ describe('createPages', () => {
           contentPath: 'content/tweets',
           fullRelativePath: false,
           mdxOtherwiseConfigured: false,
+          pruneLength: 160,
         },
       },
     });
@@ -165,6 +168,7 @@ describe('createPages', () => {
           contentPath: 'content/tweets',
           fullRelativePath: false,
           mdxOtherwiseConfigured: false,
+          pruneLength: 160,
         },
       },
     });
@@ -219,6 +223,7 @@ describe('createPages', () => {
           contentPath: 'content/toots',
           fullRelativePath: false,
           mdxOtherwiseConfigured: false,
+          pruneLength: 160,
         },
       },
     });
@@ -241,6 +246,7 @@ describe('createPages', () => {
           contentPath: 'content/toots',
           fullRelativePath: false,
           mdxOtherwiseConfigured: false,
+          pruneLength: 160,
         },
       },
     });
@@ -267,6 +273,7 @@ describe('createPages', () => {
           contentPath: 'content/toots',
           fullRelativePath: false,
           mdxOtherwiseConfigured: false,
+          pruneLength: 160,
         },
       },
     });
@@ -289,6 +296,7 @@ describe('createPages', () => {
           contentPath: 'content/toots',
           fullRelativePath: false,
           mdxOtherwiseConfigured: false,
+          pruneLength: 160,
         },
       },
     });
