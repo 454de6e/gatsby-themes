@@ -10,3 +10,5 @@ This repo contains the Following
 - [@maiertech/gatsby-theme-posts-core](https://github.com/maiertech/gatsby-themes/tree/master/packages/gatsby-theme-posts-core)
 - [@maiertech/gatsby-theme-tags-core](https://github.com/maiertech/gatsby-themes/tree/master/packages/gatsby-theme-tags-core)
 - [@maiertech/gatsby-theme-theme-ui](https://github.com/maiertech/gatsby-themes/tree/master/packages/gatsby-theme-theme-ui)
+- [@maiertech/gatsby-theme-theme-ui](https://github.com/maiertech/gatsby-themes/tree/master/packages/gatsby-theme-theme-ui)
+- [@maiertech/gatsby-theme-tweets-core](https://github.com/maiertech/gatsby-themes/tree/master/packages/gatsby-theme-tweets-core)
