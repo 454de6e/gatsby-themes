@@ -1,5 +1,12 @@
 # @maiertech/gatsby-theme-pages-core
 
+## 0.7.1
+
+### Patch Changes
+
+- Updated dependencies [5f746d8]
+  - @maiertech/gatsby-helpers@0.5.0
+
 ## 0.7.0
 
 ### Minor Changes

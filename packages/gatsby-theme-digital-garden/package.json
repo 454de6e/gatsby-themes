@@ -1,7 +1,7 @@
 {
   "name": "@maiertech/gatsby-theme-digital-garden",
   "description": "Digital garden theme with posts and notes.",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "author": "Thilo Maier <git@maier.asia>",
   "license": "MIT",
   "main": "index.js",
@@ -27,11 +27,11 @@
     "react-dom": "^16.14.0 || ^17.0.1"
   },
   "dependencies": {
-    "@maiertech/gatsby-helpers": "^0.4.0",
-    "@maiertech/gatsby-theme-base": "^0.7.1",
-    "@maiertech/gatsby-theme-pages-core": "^0.7.0",
-    "@maiertech/gatsby-theme-posts-core": "^0.10.0",
-    "@maiertech/gatsby-theme-tags-core": "^0.6.1",
+    "@maiertech/gatsby-helpers": "^0.5.0",
+    "@maiertech/gatsby-theme-base": "^0.7.2",
+    "@maiertech/gatsby-theme-pages-core": "^0.7.1",
+    "@maiertech/gatsby-theme-posts-core": "^0.10.1",
+    "@maiertech/gatsby-theme-tags-core": "^0.6.2",
     "@maiertech/gatsby-theme-theme-ui": "^0.5.1",
     "@maiertech/gatsby-theme-tweets-core": "*",
     "@mdx-js/mdx": "^1.6.22",
