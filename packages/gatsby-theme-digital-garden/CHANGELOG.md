@@ -1,5 +1,18 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.11.2
+
+### Patch Changes
+
+- Updated dependencies [5f746d8]
+- Updated dependencies [5f746d8]
+  - @maiertech/gatsby-theme-tweets-core@0.2.0
+  - @maiertech/gatsby-helpers@0.5.0
+  - @maiertech/gatsby-theme-base@0.7.2
+  - @maiertech/gatsby-theme-pages-core@0.7.1
+  - @maiertech/gatsby-theme-posts-core@0.10.1
+  - @maiertech/gatsby-theme-tags-core@0.6.2
+
 ## 0.11.1
 
 ### Patch Changes

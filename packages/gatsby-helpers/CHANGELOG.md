@@ -1,5 +1,11 @@
 # @maiertech/gatsby-helpers
 
+## 0.5.0
+
+### Minor Changes
+
+- 5f746d8: Add defaultArgs to mdxResolverPassthrough
+
 ## 0.4.0
 
 ### Minor Changes

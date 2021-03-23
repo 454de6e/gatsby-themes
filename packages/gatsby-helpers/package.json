@@ -1,7 +1,7 @@
 {
   "name": "@maiertech/gatsby-helpers",
   "description": "Utility helpers for Gatsby used by other packages.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "author": "Thilo Maier <git@maier.asia>",
   "license": "MIT",
   "main": "index.js",

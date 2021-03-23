@@ -1,7 +1,7 @@
 {
   "name": "@maiertech/gatsby-theme-base",
   "description": "An opinionated theme to jump start a Gatsby site.",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "author": "Thilo Maier <git@maier.asia>",
   "license": "MIT",
   "main": "index.js",
@@ -27,7 +27,7 @@
     "react-dom": "^16.14.0 || ^17.0.1"
   },
   "dependencies": {
-    "@maiertech/gatsby-helpers": "^0.4.0",
+    "@maiertech/gatsby-helpers": "^0.5.0",
     "gatsby-plugin-react-helmet": "^4.1.0",
     "prop-types": "^15.7.2",
     "react-helmet": "^6.1.0"
