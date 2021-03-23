@@ -57,8 +57,6 @@ interface.
 | title | String  | Image title.            |
 | alt   | String! | Image alt text.         |
 
-src: File! @fileByRelativePath title: String! alt: String!
-
 ### `TweetResource` type
 
 | Field | Type      | Description |

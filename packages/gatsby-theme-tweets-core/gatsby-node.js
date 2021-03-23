@@ -35,7 +35,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
     type TweetImage {
       src: File! @fileByRelativePath
-      title: String!
+      title: String
       alt: String!
     }
 
