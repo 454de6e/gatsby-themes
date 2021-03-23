@@ -65,7 +65,12 @@ module.exports.createSchemaCustomization = ({ actions }) => {
 /* istanbul ignore next */
 module.exports.createResolvers = ({ createResolvers }) => {
   createResolvers({
-    MdxPost: { body: { resolve: mdxResolverPassthrough('body') } },
+    MdxPost: {
+      body: {
+        // Resolver has no arguments.
+        resolve: mdxResolverPassthrough('body'),
+      },
+    },
   });
 };
 

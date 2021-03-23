@@ -6,18 +6,24 @@ export const fragment = graphql`
     id
     collection
     title
-    user
     description
     url
     thread
     tags
     image {
-      childImageSharp {
-        gatsbyImageData
+      src {
+        childImageSharp {
+          gatsbyImageData
+        }
       }
+      title
+      alt
     }
-    imageTitle
-    imageAlt
+    links {
+      title
+      href
+    }
+    body
     path
   }
 `;
