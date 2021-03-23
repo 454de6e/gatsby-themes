@@ -33,7 +33,7 @@
     "@maiertech/gatsby-theme-posts-core": "^0.10.1",
     "@maiertech/gatsby-theme-tags-core": "^0.6.2",
     "@maiertech/gatsby-theme-theme-ui": "^0.5.1",
-    "@maiertech/gatsby-theme-tweets-core": "*",
+    "@maiertech/gatsby-theme-tweets-core": "^0.2.1",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "gatsby-plugin-image": "^1.1.1",
