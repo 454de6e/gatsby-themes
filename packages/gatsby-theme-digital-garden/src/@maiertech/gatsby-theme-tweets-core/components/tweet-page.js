@@ -32,12 +32,7 @@ const ShadowedTweetPage = ({ data, location, pageContext }) => {
 
   return (
     <Layout location={location}>
-      <SEO
-        title={title}
-        description={description}
-        canonicalUrl={url}
-        path={location.pathname}
-      />
+      <SEO title={title} description={description} path={location.pathname} />
       <Container variant="narrow">
         {thread && (
           <>
