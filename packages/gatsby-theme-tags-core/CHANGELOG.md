@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-tags-core
 
+## 0.6.3
+
+### Patch Changes
+
+- cd6dab8: Fix slugify for CamelCase
+
 ## 0.6.2
 
 ### Patch Changes
