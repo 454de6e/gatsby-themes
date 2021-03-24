@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.12.1
+
+### Patch Changes
+
+- 6abca77: Don't use Twitter URL as canonical URL
+
 ## 0.12.0
 
 ### Minor Changes
