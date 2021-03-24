@@ -119,7 +119,8 @@ exports.onCreateNode = (
       collection,
       // Decide whether or not to omit relativeDirectory in path.
       fullRelativePath ? relativeDirectory : '',
-      node.frontmatter.slug || slugify(node.frontmatter.title)
+      node.frontmatter.slug ||
+        slugify(node.frontmatter.title, { decamelize: false })
     ),
     // slug from frontmatter is not needed in MdxTweet.
     slug: undefined,

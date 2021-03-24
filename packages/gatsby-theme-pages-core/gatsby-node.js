@@ -73,7 +73,8 @@ module.exports.onCreateNode = (
       basePath,
       // Decide whether or not to omit relativeDirectory in path.
       fullRelativePath ? relativeDirectory : '',
-      node.frontmatter.slug || slugify(node.frontmatter.title)
+      node.frontmatter.slug ||
+        slugify(node.frontmatter.title, { decamelize: false })
     ),
     // Set unneeded prop to undefined.
     slug: undefined,
