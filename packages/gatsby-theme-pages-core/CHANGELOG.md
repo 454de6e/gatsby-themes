@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-pages-core
 
+## 0.7.2
+
+### Patch Changes
+
+- cd6dab8: Fix slugify for CamelCase
+
 ## 0.7.1
 
 ### Patch Changes

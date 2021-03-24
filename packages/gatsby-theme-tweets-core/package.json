@@ -1,7 +1,7 @@
 {
   "name": "@maiertech/gatsby-theme-tweets-core",
   "description": "This theme adds a Tweet type to Gatsby sites.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Thilo Maier <git@maier.asia>",
   "license": "MIT",
   "main": "index.js",

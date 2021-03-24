@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-posts-core
 
+## 0.10.2
+
+### Patch Changes
+
+- cd6dab8: Fix slugify for CamelCase
+
 ## 0.10.1
 
 ### Patch Changes
