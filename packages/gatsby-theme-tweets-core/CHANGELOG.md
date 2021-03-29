@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-tweets-core
 
+## 0.3.0
+
+### Minor Changes
+
+- 0daf47f: Add support for multiple images
+
 ## 0.2.2
 
 ### Patch Changes

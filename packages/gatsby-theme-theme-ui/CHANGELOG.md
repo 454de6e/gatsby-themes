@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-theme-ui
 
+## 0.5.2
+
+### Patch Changes
+
+- 0daf47f: Upgrade all theme-ui dependencies
+
 ## 0.5.1
 
 ### Patch Changes
