@@ -23,30 +23,40 @@ to add a `Post` interface and `MdxPost` type to Gatsby sites.
 | date          |          | Date in yyyy-MM-dd format. There is no timezone magic happening anywhere. Date is optional in the sense that every posts in a collection should have a date or no post should have a date. If the collection does not have dates, previous and next posts do not make sense, even though they are computed. |
 | description   | ✓        | Description for SEO and previews (text only).                                                                                                                                                                                                                                                               |
 | tags          |          | For full tag support you need to install and configure [`@maiertech/gatsby-theme-tags-core`](https://github.com/maiertech/gatsby-themes/tree/master/packages/gatsby-theme-tags-core).                                                                                                                       |
-| images        |          | Array of relative paths to images that can be rendered in the post MDX file.                                                                                                                                                                                                                                |
+| images        |          | Array of images with `src` (relative path to image), optional `title` and mandatory `alt` text. Images can be embedded into MDX.                                                                                                                                                                            |
 | canonical_url |          | Canonical URL for SEO.                                                                                                                                                                                                                                                                                      |
 
 Author and date are optional to support using this theme to model notes in
 [`@maiertech/gatsby-theme-digital-garden`](https://github.com/maiertech/gatsby-themes/tree/master/packages/gatsby-theme-digital-garden).
 
-## `Post` interface
+## Schema customization
 
-| Field        | Type        | Description                                                                                                                                                |
-| :----------- | :---------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id           | `ID!`       | Gatsby node GUID.                                                                                                                                          |
-| collection   | `String!`   | Collection to which this post belongs.                                                                                                                     |
-| title        | `String!`   | From frontmatter.                                                                                                                                          |
-| author       | `String`    | From frontmatter.                                                                                                                                          |
-| date         | `Date`      | From frontmatter.                                                                                                                                          |
-| description  | `String!`   | From frontmatter.                                                                                                                                          |
-| tags         | `[String!]` | From frontmatter.                                                                                                                                          |
-| images       | `[File!]`   | File nodes for images that can be embedded into a post.                                                                                                    |
-| body         | `String!`   | String representation of post body.                                                                                                                        |
-| path         | `String!`   | Path to generated page starts with `basePath`, then `collection`, then full relative path if `fullRelativePath` is `true`, then slug derived from `title`. |
-| canonicalUrl | `String`    | Canonical URL for SEO.                                                                                                                                     |
+### `Post` interface
+
+| Field        | Type           | Description                                                                                                                                                |
+| :----------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id           | `ID!`          | Gatsby node GUID.                                                                                                                                          |
+| collection   | `String!`      | Collection to which this post belongs.                                                                                                                     |
+| title        | `String!`      | From frontmatter.                                                                                                                                          |
+| author       | `String`       | From frontmatter.                                                                                                                                          |
+| date         | `Date`         | From frontmatter.                                                                                                                                          |
+| description  | `String!`      | From frontmatter.                                                                                                                                          |
+| tags         | `[String!]`    | From frontmatter.                                                                                                                                          |
+| images       | `[PostImage!]` | Images that can be embedded into a post.                                                                                                                   |
+| body         | `String!`      | String representation of post body.                                                                                                                        |
+| path         | `String!`      | Path to generated page starts with `basePath`, then `collection`, then full relative path if `fullRelativePath` is `true`, then slug derived from `title`. |
+| canonicalUrl | `String`       | Canonical URL for SEO.                                                                                                                                     |
 
 Type `MdxPost` implements `Post`. If you prefer to use a data source other than
 MDX files, you can write a child theme that implements the `Post` interface.
+
+### `PostImage` type
+
+| Field | Type    | Description             |
+| :---- | :------ | ----------------------- |
+| src   | File!   | Relative path to image. |
+| title | String  | Image title.            |
+| alt   | String! | Image alt text.         |
 
 ## Images in posts
 

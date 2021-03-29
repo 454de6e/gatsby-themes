@@ -14,28 +14,38 @@ to add a `Page` type to Gatsby sites.
 
 ## Frontmatter
 
-| Key           | Required | Description                                                                  |
-| :------------ | :------- | :--------------------------------------------------------------------------- |
-| title         | ✓        | Post title, which will be slugified.                                         |
-| slug          |          | Override slugified title.                                                    |
-| description   | ✓        | Description for SEO and previews.                                            |
-| images        |          | Array of relative paths to images that can be rendered in the post MDX file. |
-| canonical_url |          | Canonical URL for SEO.                                                       |
+| Key           | Required | Description                                                                                                                      |
+| :------------ | :------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| title         | ✓        | Post title, which will be slugified.                                                                                             |
+| slug          |          | Override slugified title.                                                                                                        |
+| description   | ✓        | Description for SEO and previews.                                                                                                |
+| images        |          | Array of images with `src` (relative path to image), optional `title` and mandatory `alt` text. Images can be embedded into MDX. |
+| canonical_url |          | Canonical URL for SEO.                                                                                                           |
 
-## `Page` interface
+## Schema customization
 
-| Field        | Type      | Description                                             |
-| :----------- | :-------- | :------------------------------------------------------ |
-| id           | `ID!`     | Gatsby node GUID.                                       |
-| title        | `String!` | From frontmatter.                                       |
-| description  | `String!` | From frontmatter.                                       |
-| images       | `[File!]` | File nodes for images that can be embedded into a post. |
-| body         | `String!` | MDX body.                                               |
-| path         | `String!` | Page path.                                              |
-| canonicalUrl | `String`  | Canonical URL for SEO.                                  |
+### `Page` interface
+
+| Field        | Type           | Description                              |
+| :----------- | :------------- | :--------------------------------------- |
+| id           | `ID!`          | Gatsby node GUID.                        |
+| title        | `String!`      | From frontmatter.                        |
+| description  | `String!`      | From frontmatter.                        |
+| images       | `[PageImage!]` | Images that can be embedded into a page. |
+| body         | `String!`      | MDX body.                                |
+| path         | `String!`      | Page path.                               |
+| canonicalUrl | `String`       | Canonical URL for SEO.                   |
 
 Type `MdxPage` implements `Page`. If you prefer to use a data source other than
 MDX files, you can write a child theme that uses the `Page` interface.
+
+### `PageImage` type
+
+| Field | Type    | Description             |
+| :---- | :------ | ----------------------- |
+| src   | File!   | Relative path to image. |
+| title | String  | Image title.            |
+| alt   | String! | Image alt text.         |
 
 ## Images in pages
 

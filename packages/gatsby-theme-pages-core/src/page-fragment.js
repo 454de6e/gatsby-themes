@@ -7,9 +7,16 @@ export const fragment = graphql`
     title
     description
     images {
-      childImageSharp {
-        gatsbyImageData
+      src {
+        childImageSharp {
+          gatsbyImageData
+          original {
+            src
+          }
+        }
       }
+      title
+      alt
     }
     body
     path

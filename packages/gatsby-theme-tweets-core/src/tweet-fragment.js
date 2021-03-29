@@ -10,10 +10,13 @@ export const fragment = graphql`
     url
     thread
     tags
-    image {
+    images {
       src {
         childImageSharp {
           gatsbyImageData
+          original {
+            src
+          }
         }
       }
       title

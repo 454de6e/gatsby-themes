@@ -2,7 +2,8 @@
 title: Page in a nested folder
 description: Ullamco ut ad ut aliqua dolore duis nulla commodo.
 images:
-  - ./iwona-castiello-d-antonio-vXwXZS5_HgY-unsplash.jpg
+  - src: ./iwona-castiello-d-antonio-vXwXZS5_HgY-unsplash.jpg
+    alt: Red and blue folders.
 ---
 
 import { Box, GatsbyImage } from '@maiertech/gatsby-theme-digital-garden';
@@ -15,9 +16,8 @@ laboris pariatur aliquip irure minim ex qui in.
 
 <Box mb={3}>
   <GatsbyImage
-    image={props.images[0]}
-    alt="A set of folders."
-    loading="eager"
+    image={props.images[0].src.childImageSharp.gatsbyImageData}
+    alt={props.images[0].alt}
   />
 </Box>
 

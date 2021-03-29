@@ -13,8 +13,10 @@ tags:
   - tag1
   - tag2
 images:
-  - ./colton-duke-UExx0KnnkjY-unsplash.jpg
-  - ./ran-berkovich-axpjgviJWmk-unsplash.jpg
+  - src: ./colton-duke-UExx0KnnkjY-unsplash.jpg
+    alt: Brooklyn Bridge at sunset.
+  - src: ./ran-berkovich-axpjgviJWmk-unsplash.jpg
+    alt: "The Vessel Hell's Kitchen"
 ---
 
 import { Box, GatsbyImage } from '@maiertech/gatsby-theme-digital-garden';
@@ -37,8 +39,8 @@ nostrud magna excepteur exercitation anim.
 
 <Box mb={3}>
   <GatsbyImage
-    image={props.images[0]}
-    alt="Brooklyn Bridge at sunset."
+    image={props.images[0].src.childImageSharp.gatsbyImageData}
+    alt={props.images[0].alt}
     loading="eager"
   />
 </Box>
@@ -50,8 +52,7 @@ cillum aute non.
 
 <Box mb={3}>
   <GatsbyImage
-    image={props.images[1]}
-    alt="The Vessel at Huson Yards."
-    loading="lazy"
+    image={props.images[1].src.childImageSharp.gatsbyImageData}
+    alt={props.images[1].alt}
   />
 </Box>

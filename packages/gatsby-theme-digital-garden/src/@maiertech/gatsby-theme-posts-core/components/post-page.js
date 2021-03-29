@@ -46,11 +46,6 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
     path: createPath(basePath, tagCollection, tag),
   }));
 
-  // Create images for MDXRenderer.
-  const constrainedImages = images
-    ? images.map((image) => image.childImageSharp.gatsbyImageData)
-    : undefined;
-
   // Read Twitter username from site metadata.
   const { siteTwitter: twitterUsername } = useSiteMetadata();
 
@@ -65,7 +60,7 @@ const ShadowedPostPage = ({ data, location, pageContext }) => {
       <Container variant="narrow">
         <PostPreview post={post} mb={3} />
         <Tags values={values} mb={3} />
-        <MDXRenderer images={constrainedImages}>{body}</MDXRenderer>
+        <MDXRenderer images={images}>{body}</MDXRenderer>
         {/* Display PageFooter only when type has been set in theme options. */}
         {type && (
           <PostFooter type={type} twitterUsername={twitterUsername} mt={4} />
