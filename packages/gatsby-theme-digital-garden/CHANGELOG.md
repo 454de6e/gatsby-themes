@@ -1,5 +1,22 @@
 # @maiertech/gatsby-theme-digital-garden
 
+## 0.13.0
+
+### Minor Changes
+
+- 0daf47f: Add support for multiple images in chunks
+
+### Patch Changes
+
+- Updated dependencies [0daf47f]
+- Updated dependencies [0daf47f]
+- Updated dependencies [0daf47f]
+- Updated dependencies [0daf47f]
+  - @maiertech/gatsby-theme-pages-core@0.8.0
+  - @maiertech/gatsby-theme-tweets-core@0.3.0
+  - @maiertech/gatsby-theme-theme-ui@0.5.2
+  - @maiertech/gatsby-theme-posts-core@0.11.0
+
 ## 0.12.1
 
 ### Patch Changes

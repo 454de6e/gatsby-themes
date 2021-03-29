@@ -1,5 +1,11 @@
 # @maiertech/gatsby-theme-posts-core
 
+## 0.11.0
+
+### Minor Changes
+
+- 0daf47f: Use PageImage type to model page images
+
 ## 0.10.2
 
 ### Patch Changes
