@@ -32,6 +32,12 @@ module.exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 /* istanbul ignore next */
 module.exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
+    type PostImage {
+      src: File! @fileByRelativePath
+      title: String
+      alt: String!
+    }
+
     interface Post implements Node {
       id: ID!
       collection: String!
@@ -40,7 +46,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       description: String!
       tags: [String!]
-      images: [File!]
+      images: [PostImage!]
       body: String!
       path: String!
       canonicalUrl: String
@@ -54,7 +60,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       description: String!
       tags: [String!]
-      images: [File!] @fileByRelativePath
+      images: [PostImage!]
       body: String!
       path: String!
       canonicalUrl: String

@@ -16,11 +16,17 @@ module.exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 /* istanbul ignore next */
 module.exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
+      type PageImage {
+        src: File! @fileByRelativePath
+        title: String
+        alt: String!
+      }
+
       interface Page implements Node {
         id: ID!
         title: String!
         description: String!
-        images: [File!]
+        images: [PageImage!]
         body: String!
         path: String!
         canonicalUrl: String
@@ -29,7 +35,7 @@ module.exports.createSchemaCustomization = ({ actions }) => {
         id: ID!
         title: String!
         description: String!
-        images: [File!] @fileByRelativePath
+        images: [PageImage!]
         body: String!
         path: String!
         canonicalUrl: String

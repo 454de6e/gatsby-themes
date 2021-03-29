@@ -53,7 +53,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       url: String!
       thread: String
       tags: [String!]
-      image: TweetImage
+      images: [TweetImage!]
       links: [TweetResource!]
       body: String!
       path: String!
@@ -68,7 +68,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       url: String!
       thread: String
       tags: [String!]
-      image: TweetImage
+      images: [TweetImage!]
       links: [TweetResource!]
       body: String!
       path: String!

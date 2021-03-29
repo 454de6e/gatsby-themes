@@ -2,8 +2,8 @@ import React from 'react';
 import { object } from 'prop-types';
 import { SEO } from '@maiertech/gatsby-theme-base';
 import {
-  Box,
   Container,
+  Grid,
   Heading,
   Link,
   Tags,
@@ -16,7 +16,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../../../components/layout';
 
 const ShadowedTweetPage = ({ data, location, pageContext }) => {
-  const { title, description, tags, body, image, url, links } = data.tweet;
+  const { title, description, tags, body, images, url, links } = data.tweet;
 
   const {
     pathPrefix,
@@ -61,13 +61,16 @@ const ShadowedTweetPage = ({ data, location, pageContext }) => {
         </Heading>
         <Tags values={values} mb={3} />
         <MDXRenderer>{body}</MDXRenderer>
-        {image && (
-          <Box mb={3}>
-            <GatsbyImage
-              image={image.src.childImageSharp.gatsbyImageData}
-              alt={image.alt}
-            />
-          </Box>
+        {images && (
+          <Grid gap={3} columns={images.length > 1 ? [1, null, 2] : [1]} mb={3}>
+            {images.map((image) => (
+              <GatsbyImage
+                key={image.src.childImageSharp.original.src}
+                image={image.src.childImageSharp.gatsbyImageData}
+                alt={image.alt}
+              />
+            ))}
+          </Grid>
         )}
         <Link href={url}>
           <TwitterIcon />
