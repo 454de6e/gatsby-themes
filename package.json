@@ -20,7 +20,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.14.0",
+    "@changesets/cli": "^2.17.0",
     "@maiertech/eslint-config": "^0.17.1",
     "@maiertech/prettier-config": "^0.3.0",
     "eslint": "^7.23.0",
