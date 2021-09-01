@@ -19,7 +19,7 @@
     "@maiertech/gatsby-theme-tweets-core": "*",
     "@mdx-js/mdx": "^1.6.21",
     "@mdx-js/react": "^1.6.21",
-    "gatsby": "^3.1.2",
+    "gatsby": "^3.13.0",
     "gatsby-plugin-mdx": "^2.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
